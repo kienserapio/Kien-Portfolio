@@ -1,9 +1,70 @@
 body {
     background: rgb(21, 27, 31);
-    background: radial-gradient(circle, rgb(42, 47, 49) 0%, rgb(22, 25, 27) 35%, rgb(27, 30, 34) 100%);
+    background: radial-gradient(circle, rgba(87, 100, 106, 0.541) 0%, rgb(15, 20, 23) 35%, rgb(23, 25, 28) 100%);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+.header {
+    color: aliceblue;
+    width: 95%;
+    max-width: 800px;
+    height: 30px;
+    
+    margin-left: 26%;
+    position: relative;
+    margin-top: 2%; 
+
+    padding: 5px;
+
+    background: rgba(73, 86, 95, 0.166);
+    box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 35px;
+    border: 0.5px solid rgba(255, 255, 255, 0.16);
+
+    overflow: hidden;
+
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    
+    display: inline-flex;
+    justify-content: space-between;
+
+    animation: headerSlide;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    
+}
+
+.header-text, .header-exp, .header-proj, .header-contact {
+    background: linear-gradient(45deg, #949494 , #8a8a8a ); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    
+    letter-spacing: 1.5px;
+
+    display: inline-flex;
+    padding-right: 12%;
+    align-items: center;
+
+    transition: all 0.15s ease;
+}
+
+.kienlogo {
+    width: 30px;
+    height: 30px;
+
+    padding-left: 20px;
+    transition: all 0.15s ease;
 }
 
 .greetings{
@@ -46,6 +107,8 @@ body {
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-duration: 2s;
+
+    transition: all 0.15s ease;
 }
 
 .lastname{
@@ -68,11 +131,18 @@ body {
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-duration: 2s;
+
+    transition: all 0.15s ease;
 }
 
 @keyframes mySlide{
     from{top: -100px;}
-    to{top: 8px;}
+    to{top: 79px;}
+}
+
+@keyframes headerSlide{
+    from{top: -100px;}
+    to{top: 0px;}
 }
 
 @keyframes slide{
@@ -98,6 +168,14 @@ body {
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-duration: 3s;
+
+    mask-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1),
+        rgba(0,0,0,1) 90%,
+        rgba(0,0,0,0)
+    );
 }
 
 .desc {
@@ -118,6 +196,8 @@ body {
     animation-delay: 1s;
     animation-duration: 2s;
     animation-timing-function: ease;
+
+    transition: all 0.15s ease;
 
 }
 
@@ -140,6 +220,8 @@ body {
     animation-delay: 1s;
     animation-duration: 2s;
     animation-timing-function: ease;
+
+    transition: all 0.15s ease;
 }
 
 .experience {
@@ -166,10 +248,11 @@ body {
 
     font-family: "Outfit", sans-serif;
     font-size: 50px;
-    letter-spacing: 2px;
 
     margin-top: 100px;
-    margin-left: 610px;
+    margin-left: 200px;
+
+    transition: all 0.3s ease;
 }
 
 .proj {
@@ -180,10 +263,11 @@ body {
 
     font-family: "Outfit", sans-serif;
     font-size: 50px;
-    letter-spacing: 3px;
 
     margin-top: 100px;
-    margin-left: 620px;
+    margin-left: 200px;
+
+    transition: all 0.3s ease;
 }
 
 .skill-header {
@@ -194,11 +278,26 @@ body {
 
     font-family: "Outfit", sans-serif;
     font-size: 50px;
-    letter-spacing: 3px;
 
     margin-top: 100px;
-    margin-left: 563px;
+    margin-left: 200px;
 
+    transition: all 0.3s ease;
+}
+
+.contact {
+    color: #139DD4; 
+    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+
+    font-family: "Outfit", sans-serif;
+    font-size: 50px;
+    left: 27rem;
+    position: absolute;
+
+    transition: all 0.3s ease;
 }
 
 .skills-wrapper {
@@ -208,7 +307,6 @@ body {
     justify-content: center; 
 
     margin-top: 0px;
-    margin-left: 5px;
 }
 
 .skills-wrapper .skills {
@@ -243,7 +341,6 @@ body {
     -webkit-text-fill-color: transparent;
 
     font-size: 22px;
-    letter-spacing: 1px;
     margin-top: 25px;
     margin-bottom: 0px;
 }
@@ -255,6 +352,186 @@ body {
     border-radius: 10%;
 
     box-shadow: 0 0 15px #46485f42;
+}
+
+.contact-wrapper {
+    color: aliceblue;
+    width: 95%;
+    max-width: 500px;
+    height: 50px;
+    
+    margin-left: 33%;
+    position: relative;
+
+    padding: 5px;
+
+    background: rgba(73, 86, 95, 0.166);
+    box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 35px;
+    border: 0.5px solid rgba(255, 255, 255, 0.16);
+
+    overflow: hidden;
+
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.linkedin, .behance, .email{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: inline-flex;
+    margin: 61px;
+
+    box-shadow: grey;
+
+    transition: all 0.25s ease;
+}
+
+.linkedin:hover, .behance:hover , .email:hover{
+    transform: scale(1.30);
+    box-shadow: white;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+:is(
+    .experience,
+    .exp,
+    .proj,
+    .skill-header,
+    .contact,
+    .skills-wrapper,
+    .skills-wrapper .skills,
+    .skills-wrapper .skills .skills-name,
+    .skills-wrapper .skills .skills-image,
+    .contact-wrapper,
+    .linkedin,
+    .behance,
+    .email,
+    .card-item,
+    .card-list,
+    .slider-wrapper,
+    .swiper,
+    .project-wrapper,
+    .project-wrapper .project,
+    .project-wrapper .project .proj-image,
+    .project-wrapper .project .proj-name,
+    .project-wrapper .project .proj-type,
+    .project-wrapper .project .proj-desc,
+    .project-wrapper .project .proj-date,
+    .sinag,
+    .gcamps,
+    .beeu,
+    .surebin
+) {
+    animation-name: appear;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry 10%;
+}
+
+.tech-wrapper {
+    color: aliceblue;
+    width: 95%;
+    max-width: 1100px;
+    height: 100px;
+    
+    margin-left: 12%;
+    position: relative;
+
+    padding: 5px;
+
+    margin-bottom: 100px;
+    
+    background: rgba(73, 86, 95, 0.166);
+    box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 35px;
+    border: 0.5px solid rgba(255, 255, 255, 0.127);
+
+    overflow: hidden;
+
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+.tech {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    left: max(calc(100px * 11), 100%);
+
+    animation-name: scrollLeft;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.tech1 {
+    animation-delay: calc(10s / 11 *(11 - 1) * -1);
+}
+.tech2 {
+    animation-delay: calc(10s / 11 *(11 - 2) * -1);
+}
+.tech3 {
+    animation-delay: calc(10s / 11 *(11 - 3) * -1);
+}
+.tech4 {
+    animation-delay: calc(10s / 11 *(11 - 4) * -1);
+}
+.tech5 {
+    animation-delay: calc(10s / 11 *(11 - 5) * -1);
+}
+.tech6 {
+    animation-delay: calc(10s / 11 *(11 - 6) * -1);
+}
+.tech7 {
+    animation-delay: calc(10s / 11 *(11 - 7) * -1);
+}
+.tech8 {
+    animation-delay: calc(10s / 11 *(11 - 8) * -1);
+}
+.tech9 {
+    animation-delay: calc(10s / 11 *(11 - 9) * -1);
+}
+.tech10 {
+    animation-delay: calc(10s / 11 *(11 - 10) * -1);
+}
+.tech11 {
+    animation-delay: calc(10s / 11 *(11 - 11) * -1);
+}
+
+@keyframes scrollLeft {
+    to{
+        left: -200px;
+    }
 }
 
 .project-wrapper {
@@ -287,9 +564,13 @@ body {
     align-items: center;
     justify-content: center;
 
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+
     margin-bottom: 4%;
 
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
 }
 
 .project-wrapper .project .proj-image {
@@ -297,7 +578,7 @@ body {
     height: 100px;
 
     border-radius: 50%;
-    margin-bottom: 5px;
+    clip-path: circle(50% at 50% 50%);
 }
 
 .project-wrapper .project .proj-name {
@@ -358,15 +639,49 @@ body {
     margin-bottom: 0px;
 }
 
+.sinag, .gcamps, .beeu, .surebin{
+    width: 450px;
+    height: 300px;
+
+    align-self: first baseline;
+    position: absolute;
+    left: -150px;
+
+    transition: all 0.3s ease;
+}
+
+.soulhart {
+    width: 350px;
+    height: 250px;
+
+    align-self: first baseline;
+    position: absolute;
+    left: -120px;
+    padding-bottom: 20px;
+
+    transition: all 0.3s ease; 
+}
+
+.xorbin {
+    width: 400px;
+    height: 400px;
+    align-self: first baseline;
+    position: absolute;
+    left: -125px;
+    padding-bottom: 50px;
+
+    transition: all 0.3s ease;
+}
+
 .swiper, .slider-wrapper {
     width: 100%;
 }
 
 .slider-wrapper {
     overflow: hidden;
-    max-width: 1250px;
+    max-width: 1100px;
     padding: 30px;
-    margin-left: 100px;
+    margin-left: 175px;
 
     background: rgba(73, 86, 95, 0.082);
     box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
@@ -374,6 +689,14 @@ body {
     -webkit-backdrop-filter: blur( 6.5px );
     border-radius: 35px;
     border: 0.5px solid rgba(255, 255, 255, 0.127);
+
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,1) 90%,
+        rgba(0,0,0,0)
+    );
 }
 
 .card-list .card-item {
@@ -402,8 +725,8 @@ body {
 }
 
 .card-list .card-item .org-image {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 
     border-radius: 50%;
     margin-bottom: 5px;
@@ -422,7 +745,6 @@ body {
 }
 
 .card-list .card-item .org-position {
-    letter-spacing: 1px;
     background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
     background-clip: text;
     -webkit-background-clip: text; 
@@ -439,7 +761,7 @@ body {
 .card-list .card-item .org-date {
     letter-spacing: 2.5px;
     color: rgb(143, 152, 158);
-    font-size: 16px;
+    font-size: 14px;
 
     align-self: center;
     justify-content: center;
@@ -456,20 +778,86 @@ body {
     transition: all 0.085s ease-in-out;
 }
 
+/*----------------- ALL THE ANIMATIONS ------------------ */
+
 .slider-wrapper .swiper-slide-button:hover {
     transform: scale(1.15);
 }
 
 .card-list .card-item:hover {
-    transform: scale(1.15) rotate(1.5deg);
+    transform: scale(1.125) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.151);
+}
+
+.project-wrapper .project::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(233, 234, 255, 0.1); /* Adjust color to match the theme */
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
+    border-radius: 35px;
 }
 
 .project-wrapper .project:hover {
-    transform: scale(1.05) rotate(1.5deg);
-    box-shadow: 0 0 15px #e9eaff9b;
+    transform: scale(1.1) rotate(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 35px;
+}
+
+.project-wrapper .project:hover::before {
+    opacity: 1;
+}
+
+.sinag:hover, .beeu:hover, .gcamps:hover, .surebin:hover, .xorbin:hover, .soulhart:hover{
+    transform: perspective(1500px) rotate(1.25deg) scale(1.15);
 }
 
 .skills-wrapper .skills:hover {
     transform: scale(1.10) rotate(1.25deg);
     box-shadow: 0 0 15px #e9eaff9b;
 }
+
+.exp:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.188);
+    transform: scale(1.075);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.proj:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.188);
+    transform: scale(1.075);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.skill-header:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.188);
+    transform: scale(1.075);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.desc:hover {
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.city:hover {
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.kienlogo:hover, .header-exp:hover, .header-proj:hover, .header-contact:hover {
+    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    
+    font-weight: 500;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
