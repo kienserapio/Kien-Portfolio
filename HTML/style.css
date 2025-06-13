@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: rgb(21, 27, 31);
     background: radial-gradient(circle, rgba(87, 100, 106, 0.541) 0%, rgb(15, 20, 23) 35%, rgb(23, 25, 28) 100%);
@@ -78,7 +82,7 @@ body {
     font-size: 20px;
 
     position: absolute;
-    margin-left: 405px;
+    margin-left: 355px;
     margin-top: 35px;
 
 
@@ -100,7 +104,7 @@ body {
     font-size: 50px;
 
     position: absolute;
-    margin-left: 400px;
+    margin-left: 350px;
 
 
     animation: mySlide;
@@ -157,7 +161,7 @@ body {
 
 @keyframes cityslide{
     from{right: -100px;}
-    to{right: 90px;}
+    to{right: 150px;}
 }
 
 .kienimage {
@@ -186,6 +190,7 @@ body {
     -webkit-text-fill-color: transparent; 
 
     font-family: "Outfit", sans-serif;
+    font-size: 16px;
     line-height: 40%;
 
     position: absolute;
@@ -209,12 +214,12 @@ body {
     -webkit-text-fill-color: transparent; 
 
     font-family: "Outfit", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 40%;
 
     position: absolute;
     top: 300px;
-    right: 90px;
+    right: 150px;
 
     animation: cityslide;
     animation-delay: 1s;
