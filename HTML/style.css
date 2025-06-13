@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -651,6 +652,7 @@ body {
     align-self: first baseline;
     position: absolute;
     left: -150px;
+    bottom: -25px;
 
     transition: all 0.3s ease;
 }
@@ -667,13 +669,13 @@ body {
     transition: all 0.3s ease; 
 }
 
-.xorbin {
-    width: 400px;
-    height: 400px;
+.keyraoke {
+    width: 350px;
+    height: 250px;
     align-self: first baseline;
     position: absolute;
     left: -125px;
-    padding-bottom: 50px;
+    bottom: 0px;
 
     transition: all 0.3s ease;
 }
@@ -783,6 +785,129 @@ body {
     transition: all 0.085s ease-in-out;
 }
 
+.form-content {
+    font-family: "Outfit", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.form-content-title {
+    color: aliceblue;
+    font-size: 40px;
+    transition: all 0.085s ease-in-out;
+}
+
+.form-input {
+    width: 300px;
+    height: 50px;
+    padding-left: 25px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: rgba(73, 86, 95, 0.166);
+    box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    color: aliceblue;
+    font-family: "Outfit", sans-serif;
+}
+
+.form textarea {
+    width: 300px;
+    height: 150px;
+    resize: none;
+    padding-top: 15px;
+    border-radius: 25px;
+}
+
+.form label {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 1000;
+    font-family: "Outfit", sans-serif;
+}
+
+.form button {
+    font-family: "Outfit", sans-serif;
+    font-weight: 1000;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: aliceblue;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(73, 86, 95, 0.76);
+    box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    cursor: pointer;
+
+    transition: all 0.085s ease-in-out;
+}
+
+.form-input:focus, .form textarea:focus {
+    border: 2px solid #818384;
+    box-shadow: 0 0 10px rgba(208, 209, 210, 0.5);
+}
+
+.email-form {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.email-form--open {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.form-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 50px;
+    font-family: "Outfit", sans-serif;
+    width: 1.25em;
+    height: 1.25em;
+    outline: none;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+
+.form-close:active, .form-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-tap-highlight-color: transparent;
+}
 /*----------------- ALL THE ANIMATIONS ------------------ */
 
 .slider-wrapper .swiper-slide-button:hover {
@@ -816,7 +941,7 @@ body {
     opacity: 1;
 }
 
-.sinag:hover, .beeu:hover, .gcamps:hover, .surebin:hover, .xorbin:hover, .soulhart:hover{
+.sinag:hover, .beeu:hover, .gcamps:hover, .surebin:hover, .keyraoke:hover, .soulhart:hover{
     transform: perspective(1500px) rotate(1.25deg) scale(1.15);
 }
 
@@ -866,3 +991,14 @@ body {
     cursor: pointer;
 }
 
+.form button:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.423);
+    transform: scale(1.15);
+    transition: transform 0.15s ease, text-shadow 0.15s ease;
+}
+
+.form-content-title:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.163);
+    transform: scale(1.075);
+    transition: transform 0.15s ease, text-shadow 0.15s ease;
+}
