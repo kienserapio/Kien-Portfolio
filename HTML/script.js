@@ -20,3 +20,17 @@ const swiper = new Swiper('.slider-wrapper', {
         },
     },
   });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openBtn = document.getElementById('openEmailForm');
+    const emailForm = document.querySelector('.email-form');
+    const closeBtn = document.querySelector('.form-close');
+
+    openBtn.addEventListener('click', function () {
+        emailForm.classList.add('email-form--open');
+    });
+
+    closeBtn.addEventListener('click', function () {
+        emailForm.classList.remove('email-form--open');
+    });
+});
