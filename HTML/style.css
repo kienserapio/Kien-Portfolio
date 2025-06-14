@@ -996,3 +996,174 @@ body {
     transform: scale(1.075);
     transition: transform 0.15s ease, text-shadow 0.15s ease;
 }
+
+/* ------------------- MOBILE RESPONSIVE OVERRIDES ------------------- */
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .header-text,
+  .header-exp,
+  .header-proj,
+  .header-contact {
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .kienlogo {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  /* .firstname,
+  .lastname,
+  .greetings {
+    font-size: 2.5rem;
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .kienimage {
+    max-width: 90%;
+    height: auto;
+    position: static;
+    display: block;
+    margin: 0 auto;
+  } */
+
+  .desc,
+  .city {
+    position: static;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px auto;
+    padding: 5px;
+  }
+
+  .experience,
+  .card-item {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .project-wrapper .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exp,
+  .proj,
+  .skill-header,
+  .contact {
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px auto 20px;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .skills-wrapper .skills {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .skills-wrapper .skills .skills-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-wrapper {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    justify-content: space-around;
+  }
+
+  .linkedin,
+  .behance,
+  .email {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slider-wrapper {
+    padding: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+/* 
+  .proj-name,
+  .proj-type,
+  .proj-desc,
+  .proj-date {
+    margin-left: 0;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+  } */
+
+  .form-content {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .form-input,
+  .form textarea {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .form-content-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form-close {
+    font-size: 36px;
+  }
+
+  .tech-wrapper {
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto 50px;
+  }
+
+  .tech {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* .sinag,
+  .gcamps,
+  .beeu,
+  .surebin,
+  .soulhart,
+  .keyraoke {
+    position: static;
+    width: 100%;
+    height: auto;
+  } */
+}
