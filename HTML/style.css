@@ -14,7 +14,7 @@ body {
 .header {
     color: aliceblue;
     width: 95%;
-    max-width: 800px;
+    max-width: 50%;
     height: 30px;
     
     margin-left: 26%;
@@ -72,77 +72,70 @@ body {
     transition: all 0.15s ease;
 }
 
-.greetings{
-    color: #139DD4; 
-    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+.greetings,
+.firstname,
+.lastname {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+}
 
-    font-family: "Outfit", sans-serif;
+.greetings {
     font-size: 20px;
+    font-family: "Outfit", sans-serif;
+    top: 90px;
 
-    position: absolute;
-    margin-left: 355px;
-    margin-top: 35px;
-
-
-    animation: mySlide;
-    animation-delay: 1s;
-    animation-timing-function: ease;
-    animation-duration: 2s;
+    background: linear-gradient(45deg, #FFFAFA, #F2F2F2, #E6E6E6, #D9D9D9, #CCCCCC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.firstname{
-    color: #139DD4; 
-    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-
+.firstname, .lastname {
+    font-size: 50px;
     font-family: "Outfit", sans-serif;
     font-weight: bold;
-    font-size: 50px;
 
-    position: absolute;
-    margin-left: 350px;
-
-
-    animation: mySlide;
-    animation-delay: 1s;
-    animation-timing-function: ease;
-    animation-duration: 2s;
-
+    background: linear-gradient(45deg, #FFFAFA, #F2F2F2, #E6E6E6, #D9D9D9, #CCCCCC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: all 0.15s ease;
 }
 
-.lastname{
-    color: #139DD4; 
-    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+/* Vertical positioning (stacked neatly) */
+.firstname {
+    top: 50px;
+    letter-spacing: 10px;
 
-    font-family: "Outfit", sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-
-    position: absolute;
-    margin-left: 765px;
-    
-    letter-spacing: 1.5px;
-
-    animation: mySlide;
+    animation: firstSlide;
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-duration: 2s;
-
-    transition: all 0.15s ease;
 }
 
-@keyframes mySlide{
+.lastname {
+    top: 130px;
+
+    animation: lastSlide;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+}
+
+
+@keyframes firstSlide{
+    from{top: -200px;}
+    to{top: 50px;}
+}
+
+@keyframes lastSlide{
     from{top: -100px;}
-    to{top: 79px;}
+    to{top: 130px;}
 }
 
 @keyframes headerSlide{
@@ -157,17 +150,18 @@ body {
 
 @keyframes sideslide{
     from{left: -100px;}
-    to{left: 100px;}
+    to{left: 5%;}
 }
 
 @keyframes cityslide{
     from{right: -100px;}
-    to{right: 150px;}
+    to{right: 5%;}
 }
 
 .kienimage {
     position: relative;
-    left: 500px;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
 
     animation: slide;
     animation-delay: 1s;
@@ -176,59 +170,49 @@ body {
 
     mask-image: linear-gradient(
         to top,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1),
-        rgba(0,0,0,1) 90%,
-        rgba(0,0,0,0)
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
     );
 }
 
 .desc {
-    color: #139DD4; 
-    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-
-    font-family: "Outfit", sans-serif;
-    font-size: 16px;
-    line-height: 40%;
-
     position: absolute;
     top: 450px;
-    left: 100px;
+    left: 5%;
 
-    animation: sideslide;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    font-size: 16px;
+    line-height: 40%;
+    font-family: "Outfit", sans-serif;
 
+    background: linear-gradient(45deg, #FFFAFA, #F2F2F2, #E6E6E6, #D9D9D9, #CCCCCC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: sideslide 2s ease 1s;
     transition: all 0.15s ease;
-
 }
 
 .city {
-    color: #139DD4; 
-    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-
-    font-family: "Outfit", sans-serif;
-    font-size: 16px;
-    line-height: 40%;
-
     position: absolute;
     top: 300px;
-    right: 150px;
+    right: 5%;
 
-    animation: cityslide;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+    font-size: 16px;
+    line-height: 40%;
+    font-family: "Outfit", sans-serif;
 
+    background: linear-gradient(45deg, #FFFAFA, #F2F2F2, #E6E6E6, #D9D9D9, #CCCCCC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: cityslide 2s ease 1s;
     transition: all 0.15s ease;
 }
+
 
 .experience {
     width: 575px;
@@ -292,24 +276,28 @@ body {
 }
 
 .contact {
-    color: #139DD4; 
-    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC ); 
+    background: linear-gradient(45deg, #FFFAFA , #F2F2F2 , #E6E6E6 , #D9D9D9 , #CCCCCC); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 
     font-family: "Outfit", sans-serif;
-    font-size: 50px;
-    left: 27rem;
+    font-size: 50px; 
     position: absolute;
 
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
     transition: all 0.3s ease;
+    white-space: nowrap; 
 }
 
 .skills-wrapper {
     display: flex;
     flex-wrap: wrap; 
     gap: 3%;
+    
     justify-content: center; 
 
     margin-top: 0px;
@@ -362,19 +350,19 @@ body {
 
 .contact-wrapper {
     color: aliceblue;
-    width: 95%;
-    max-width: 500px;
+    width: 90%; /* Changed from 31% */
+    max-width: 500px; /* Optional: sets a limit */
     height: 50px;
-    
-    margin-left: 33%;
+
+    margin: 0 auto; /* Center horizontally */
     position: relative;
 
     padding: 5px;
 
     background: rgba(73, 86, 95, 0.166);
     box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
-    backdrop-filter: blur( 6.5px );
-    -webkit-backdrop-filter: blur( 6.5px );
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
     border-radius: 35px;
     border: 0.5px solid rgba(255, 255, 255, 0.16);
 
@@ -382,25 +370,27 @@ body {
 
     font-family: "Outfit", sans-serif;
     font-weight: bold;
-    
-    display: inline-flex;
+
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-around;
 }
 
-.linkedin, .behance, .email{
+.linkedin, .behance, .email {
     width: 40px;
     height: 40px;
 
     border-radius: 50%;
 
-    display: inline-flex;
-    margin: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     box-shadow: grey;
 
     transition: all 0.25s ease;
 }
+
 
 .linkedin:hover, .behance:hover , .email:hover{
     transform: scale(1.30);
@@ -457,10 +447,10 @@ body {
 .tech-wrapper {
     color: aliceblue;
     width: 95%;
-    max-width: 1100px;
+    max-width: 70%;
     height: 100px;
     
-    margin-left: 12%;
+    margin-left: 25vh;
     position: relative;
 
     padding: 5px;
@@ -686,9 +676,9 @@ body {
 
 .slider-wrapper {
     overflow: hidden;
-    max-width: 1100px;
+    max-width: 80%;
     padding: 30px;
-    margin-left: 175px;
+    margin-left: 10%;
 
     background: rgba(73, 86, 95, 0.082);
     box-shadow: 0 8px 32px 0 rgba(81, 82, 95, 0.099);
@@ -868,7 +858,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+
     background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
