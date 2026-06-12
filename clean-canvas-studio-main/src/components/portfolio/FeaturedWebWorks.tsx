@@ -96,13 +96,13 @@ const FeaturedWebWorks = () => {
       title: "Centro", 
       tag: "NextJS, Typescript, Tailwind", 
       image: "/websites/centro.png",
-      url: "#"
+      url: "https://centro-platform.vercel.app"
     },
     { 
       title: "Wika", 
       tag: "NextJS, Typescript, Tailwind", 
       image: "/websites/wika.png",
-      url: "https://wika-ph.vercel.app"
+      url: "https://wikaph.com"
     },
     { 
       title: "She is DEVCON", 
