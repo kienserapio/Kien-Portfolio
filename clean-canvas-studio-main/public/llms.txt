@@ -1,0 +1,72 @@
+# Kien Serapio
+
+> Kien Leriss R. Serapio is a product designer and software engineer based in Quezon City, Metro Manila, Philippines. He is the Founder & CEO of Wika PH, an AI Engineering Intern at NMBLR AI Foundry, and a BS Computer Science student at the Technological University of the Philippines — Manila (class of 2027). He works across product design, AI engineering, and full stack development — "from concept to code."
+
+- Website: https://kienserapio.com
+- LinkedIn: https://www.linkedin.com/in/kienserapio
+- GitHub: https://github.com/kienserapio
+- Medium: https://medium.com/@kienserapio
+- X: https://x.com/KienSerapio
+- Email: kienleriss28@gmail.com
+- CV (PDF): https://kienserapio.com/%5BCV%5D%20Kien%20Serapio.pdf
+
+## Current roles
+
+- **Founder & Chief Executive Officer, Wika PH** (Mar 2026 – present). Founded a language-learning EdTech startup teaching regional Filipino languages. Architected the React Native (Expo) mobile app and directs a cross-functional squad of six engineers and product designers.
+- **AI Engineering Intern, NMBLR AI Foundry** — Ortigas, Pasig City (Jun 2026 – Jul 2027). Runs structured testing and evaluation cycles for Forge, the company's core AI technology, and supports the NMBLR+ engineering team on model integrations. Builds enterprise-grade automated AI workflows and interactive data dashboards with Claude Code, accelerating multi-agent orchestration pipelines.
+- **Vice President of Technology, DEVCON Manila Chapter** (Jan 2026 – present). Builds digital platforms and event infrastructure for nationwide volunteer networks; deploys technical initiatives in AI and blockchain.
+
+## Previous experience
+
+- **Software Developer, KPVE Pty Ltd** — remote, Australia (Jun 2026 – Dec 2026). End-to-end web and mobile products for Australian enterprises including Sonic Healthcare, SDA Rentals, and Doc On Call.
+- **Product Designer, DEVCON Philippines** (Jan 2026 – Apr 2026). Built the DEVCON+ event membership platform across 11 nationwide chapters; a Figma design system plus a Claude Code and Supabase PWA prototype lifted design-to-prototype velocity 40%.
+- **Full Stack Development Intern, DEVCON Philippines** (Sept 2025 – Dec 2026). Engineered dApps on the Internet Computer Protocol and pioneered the Caffeine AI ecosystem in the Philippines, including the first Caffeine AI Manila Hackathon (200+ participants, 300+ attendees).
+- **Product Engineering — Junior Mission Specialist, KadaKareer** (Jan 2026). Re-engineered the "Koach" interface for clarity, speed, and accessibility.
+- **UI/UX Intern, Easybus PH Inc.** (Jul 2025 – Oct 2025). Designed and shipped booking platforms for Ohayami Trans, DLTB Co., and Raymond, serving 5,000+ monthly commuters.
+- **Digital and Social Media Operations Intern, Globe Telecom** (Apr 2025 – Jul 2025). Key visuals for GlobeICON and Globe of Good, reaching 300,000+ followers.
+- **Junior Graphic Designer, Widustalk Academy** (Feb 2023 – Aug 2023). Digital and print assets for Lingoloco, Bobjo, Mango Rush, and Bueno.
+
+## Leadership
+
+- **President / Chapter Organizer, Google Developer Group on Campus — TUP Manila** (Jul 2025 – Jun 2026). Manages 100+ executives; workshops on Firebase, Flutter, and Gemini reaching 300+ students.
+- **Vice Governor, College of Science Student Council — TUP USG Manila** (Jun 2024 – Jul 2025). Programs for 1,500+ students, leading a council of 51.
+- **Head of Creatives, DEVCON Manila Chapter** (Mar 2025 – Dec 2025).
+
+## Selected projects
+
+- **Wika** — React Native (Expo), TypeScript, Supabase, Cartesia. AI-driven Philippine language-learning app with a real-time conversational tutor and a custom model trained on regional Philippine datasets. 250+ beta testers. 1st Runner Up, Developer Camp Manila 2026. https://wikaph.com
+- **DEVCON+** — React Vite, TypeScript, Tailwind CSS, Supabase, Claude Code. Unified community PWA for 11 DEVCON chapters with events and an XP rewards system.
+- **AKBAI** — AI-powered itinerary travel planner and local translator for tourists in the Philippines.
+- **ATLAS by Equilife Medical** — Next.js, TypeScript, Tailwind CSS, Supabase, PowerSync. Enterprise operations platform with a normalized relational schema, REST API layer, and role-based access control.
+- **Sinag** — React Vite, TypeScript, Gemini, Flask, Thirdweb, Polygon. AI and blockchain rewards system for electricity savings, built for the Meralco IDOL Hackathon 2025. https://sinag-website.vercel.app
+- **Centro** — Next.js, TypeScript, Tailwind CSS, Supabase. Property management SaaS for subdivisions, condominiums, and barangay administration. https://centro-platform.vercel.app
+- **Kolehiyo** — React Vite, Node.js, Express, PostgreSQL, Supabase. Centralized college and scholarship application tracker. https://kolehiyo.vercel.app
+- **LogMark AI** — React, TypeScript, Flask, Python, Claude, Selenium. AI-powered social bookmark manager with a swipe-based Spotlight interface.
+- **WarmApp** — Python, YOLOv8, Roboflow. Real-time computer vision fitness assistant with a custom object-detection model for calisthenic form tracking.
+- **Eclipse** — Godot, GDScript. 2D movement platformer with a dual-state physics engine, built in 48 hours. Most Fun Game (Major Award), Global Game Jam 2026.
+
+## Skills
+
+- **Development:** React, React Native, Next.js, Express, Node.js, HTML/CSS/JavaScript, TypeScript, PostgreSQL, Supabase, Python, CI/CD
+- **AI:** LLM integration, prompt engineering, agentic workflows, RAG pipelines, Claude Code, multi-agent orchestration, model evaluation
+- **Design:** Figma, WordPress (Elementor, Brizy), Adobe Creative Suite, Canva
+
+## Awards
+
+- 1st Runner Up — Wika, Developer Camp Manila 2026
+- Most Fun Game (Major Award) — Global Game Jam 2026, CIIT
+- NCR Finalist Top 4 — Packethacks 2024 IoT
+- Bronze Awardee — StartUp QC 2024 Student Competition
+- Dean's Lister, TUP Manila; CHED-NCR StuFAPs CMSP Scholar; YMCA Manila Scholarship Recipient
+
+## Speaking and judging
+
+- Hackathon Judge — DLSU-D SIKAPTala Hackathon 2026
+- Journey Talk Speaker — GDGoC PLM General Assembly 2026
+- AI Resource Speaker — JRU "AI Am Ready" Seminar 2025; EARIST COMSA Seminar 2025
+- Game Development Speaker — PUP The Programmers Guild Unlock() 2025; DEVCON Manila Game On Game Jam 2025
+
+## Pages
+
+- [Home](https://kienserapio.com/): Featured app work (Wika, DEVCON+, AKBAI) and websites.
+- [About](https://kienserapio.com/about): Full work experience, leadership roles, and technical skills.

@@ -113,7 +113,7 @@ const FeaturedWorks = () => {
         {/* DEVCON+ row */}
         <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
           <div className="flex items-center gap-5">
-            <img src={devconIcon} alt="WIKA app icon" width={88} height={88} className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-md" loading="lazy" />
+            <img src={devconIcon} alt="DEVCON+ app icon" width={88} height={88} className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-md" loading="lazy" />
             <div>
               <div className="text-xs tracking-widest text-muted-foreground flex items-center">
                 MEMBER PLATFORM <SignalIcon />
@@ -150,7 +150,7 @@ const FeaturedWorks = () => {
         {/* AKBAI row */}
         <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
           <div className="flex items-center gap-5">
-            <img src={akbaiIcon} alt="WIKA app icon" width={88} height={88} className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-md" loading="lazy" />
+            <img src={akbaiIcon} alt="AKBAI app icon" width={88} height={88} className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-md" loading="lazy" />
             <div>
               <div className="text-xs tracking-widest text-muted-foreground flex items-center">
                 AI TRAVEL PLANNER <SignalIcon />

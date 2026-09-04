@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import NavBar from "@/components/portfolio/NavBar";
 import Footer from "@/components/portfolio/Footer";
 // import portrait from "@/assets/about-portrait.jpg";
@@ -17,6 +18,7 @@ import {
   IllustratorIcon,
   MonoLogo,
 } from "../components/portfolio/icons";
+import { PERSON_ID, SITE_URL, SOCIAL_LINKS } from "@/lib/site";
 
 type Exp = {
   company: string;
@@ -37,6 +39,17 @@ const experiences: Exp[] = [
     bullets: [
       "Leading product, design, and engineering for a Filipino-first language platform.",
       "Defining brand, strategy, and end-to-end user experience.",
+    ],
+  },
+  {
+    company: "NMBLR AI Foundry",
+    role: "AI Engineering Intern",
+    date: "Jun 2026 — Jul 2027",
+    pillClass: "glass-pink",
+    logo: { src: "/logos/nmblr-mark.jpg" },
+    bullets: [
+      "Ran structured testing and evaluation cycles for Forge, the company’s core AI technology.",
+      "Built enterprise-grade AI workflows and data dashboards with Claude Code, accelerating multi-agent orchestration pipelines.",
     ],
   },
   {
@@ -145,11 +158,82 @@ const designStack = [
   { name: "Adobe Illustrator", Icon: IllustratorIcon },
 ];
 
+const TITLE = "About Kien Serapio — Product Designer & Software Engineer";
+
+const DESCRIPTION =
+  "Kien Serapio's work history: Founder & CEO of Wika PH, AI Engineering Intern at NMBLR AI Foundry, DEVCON, Globe Telecom, and GDGoC TUP Manila president.";
+
+/** Longer form, for structured data where there is no length budget. */
+const BIO =
+  "Kien Leriss R. Serapio is the Founder & CEO of Wika PH, an AI Engineering Intern at NMBLR AI Foundry, and a BS Computer Science student at the Technological University of the Philippines — Manila. He works across product design, AI engineering, and full stack development.";
+
+/** Module scope keeps the object reference stable across renders. */
+const ABOUT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${SITE_URL}/about#webpage`,
+      url: `${SITE_URL}/about`,
+      name: TITLE,
+      description: DESCRIPTION,
+      inLanguage: "en",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      mainEntity: { "@id": PERSON_ID },
+      primaryImageOfPage: `${SITE_URL}/Unknown-33.jpg`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${SITE_URL}/about#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "About", item: `${SITE_URL}/about` },
+      ],
+    },
+    {
+      "@type": "Person",
+      "@id": PERSON_ID,
+      name: "Kien Serapio",
+      alternateName: "Kien Leriss R. Serapio",
+      url: `${SITE_URL}/`,
+      image: `${SITE_URL}/og-image.jpg`,
+      description: BIO,
+      sameAs: SOCIAL_LINKS,
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Technological University of the Philippines - Manila",
+      },
+      hasOccupation: [
+        ...experiences.map((e) => ({
+          "@type": "Occupation",
+          name: e.role,
+          description: `${e.role} at ${e.company} (${e.date}). ${e.bullets.join(" ")}`,
+          hiringOrganization: { "@type": "Organization", name: e.company },
+        })),
+        ...leadership.map((l) => ({
+          "@type": "Occupation",
+          name: l.role,
+          description: `${l.role}, ${l.org}. ${l.note}`,
+          hiringOrganization: { "@type": "Organization", name: l.org },
+        })),
+      ],
+      knowsAbout: [...techStack, ...designStack].map((t) => t.name),
+    },
+  ],
+};
+
 const About = () => {
   useScrollReveal();
 
   return (
     <main className="min-h-screen bg-background">
+      <Seo
+        title={TITLE}
+        description={DESCRIPTION}
+        path="/about"
+        type="profile"
+        jsonLd={ABOUT_JSON_LD}
+      />
       <NavBar />
 
       {/* Hero / Intro */}
