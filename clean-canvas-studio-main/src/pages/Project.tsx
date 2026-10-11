@@ -1,6 +1,7 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowUpRight, Lock } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Lock } from "lucide-react";
+import { useDragScroll } from "@/hooks/useDragScroll";
 import Seo from "@/components/Seo";
 import Cta from "@/components/kit/Cta";
 import Device, { Phone } from "@/components/kit/Device";
@@ -29,6 +30,73 @@ const Block = ({ title, children }: { title: string; children: React.ReactNode }
   </Reveal>
 );
 
+/** App screens: a draggable, swipeable shelf with arrows; tap/click a phone to enlarge it. */
+const PAD = "px-4 sm:px-10 lg:px-[max(2.5rem,calc((100vw-72rem)/2+2.5rem))]";
+const SCROLL_PAD = "scroll-px-4 sm:scroll-px-10 lg:scroll-px-[max(2.5rem,calc((100vw-72rem)/2+2.5rem))]";
+
+const PhoneShelf = ({ phones, onOpen }: { phones: MediaImage[]; onOpen: (im: MediaImage) => void }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  useDragScroll(ref);
+  const [edge, setEdge] = useState({ start: true, end: phones.length < 3 });
+
+  const update = () => {
+    const el = ref.current;
+    if (!el) return;
+    setEdge({ start: el.scrollLeft < 8, end: el.scrollLeft + el.clientWidth >= el.scrollWidth - 8 });
+  };
+  const step = (dir: 1 | -1) => {
+    const el = ref.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>("button");
+    el.scrollBy({ left: dir * ((card?.offsetWidth ?? 240) + 24) * 2, behavior: "smooth" });
+  };
+
+  return (
+    <div className="relative mt-8">
+      <div
+        ref={ref}
+        onScroll={update}
+        // vertical padding keeps the hover lift and the phones' shadows from being clipped
+        className={`no-scrollbar flex cursor-grab snap-x snap-mandatory gap-5 overflow-x-auto pb-16 pt-4 sm:gap-6 ${PAD} ${SCROLL_PAD}`}
+      >
+        {phones.map((im) => (
+          <button
+            key={im.src}
+            type="button"
+            onClick={() => onOpen(im)}
+            data-sfx="open"
+            data-sfx-hover="hoverImage"
+            aria-label={`Enlarge: ${im.alt}`}
+            className="no-scale w-[62vw] max-w-[15rem] shrink-0 snap-start transition-transform duration-500 hover:-translate-y-1.5 sm:w-60"
+          >
+            <Phone src={im.src} alt={im.alt} />
+          </button>
+        ))}
+        {/* trailing spacer: flex scrollers drop end padding, which cut off the last phone */}
+        <div aria-hidden className="w-px shrink-0 sm:w-4 lg:w-[max(1.5rem,calc((100vw-72rem)/2))]" />
+      </div>
+
+      {phones.length > 2 && (
+        <div className={`-mt-8 flex justify-end gap-2 ${PAD}`}>
+          {([-1, 1] as const).map((d) => (
+            <button
+              key={d}
+              type="button"
+              aria-label={d < 0 ? "Previous screens" : "Next screens"}
+              onClick={() => step(d)}
+              disabled={d < 0 ? edge.start : edge.end}
+              data-sfx="swipe"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-white text-ink transition-opacity disabled:opacity-30"
+            >
+              {d < 0 ? <ArrowLeft className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const Gallery = ({ p, onOpen }: { p: P; onOpen: (im: MediaImage) => void }) => {
   const { images } = mediaFor(p.slug);
   const phones = images.filter((im) => im.kind === "phone");
@@ -40,23 +108,7 @@ const Gallery = ({ p, onOpen }: { p: P; onOpen: (im: MediaImage) => void }) => {
         <Eyebrow>Screens</Eyebrow>
       </div>
 
-      {phones.length > 0 && (
-        <div className="no-scrollbar mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-6 scroll-px-4 sm:gap-8 sm:px-10 sm:scroll-px-10 lg:px-[max(2.5rem,calc((100vw-72rem)/2+2.5rem))] lg:scroll-px-[max(2.5rem,calc((100vw-72rem)/2+2.5rem))]">
-          {phones.map((im) => (
-            <button
-              key={im.src}
-              type="button"
-              onClick={() => onOpen(im)}
-              data-sfx="open"
-              data-sfx-hover="hoverImage"
-              aria-label={`Enlarge: ${im.alt}`}
-              className="no-scale w-[58vw] max-w-[15rem] shrink-0 snap-center transition-transform duration-500 hover:-translate-y-1.5 sm:w-60"
-            >
-              <Phone src={im.src} alt={im.alt} />
-            </button>
-          ))}
-        </div>
-      )}
+      {phones.length > 0 && <PhoneShelf phones={phones} onOpen={onOpen} />}
 
       {wide.length > 0 && (
         <div className="mx-auto mt-8 grid max-w-6xl gap-6 px-4 sm:px-10 md:grid-cols-2">
