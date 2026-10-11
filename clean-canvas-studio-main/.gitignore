@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local-only sources (not shipped): raw screenshots and the personal resume
+assets-source/
+/[[]RESUME[]]*.pdf
+.playwright-mcp/

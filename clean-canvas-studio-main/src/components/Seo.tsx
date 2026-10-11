@@ -3,7 +3,6 @@ import {
   DEFAULT_OG_IMAGE,
   OG_IMAGE_ALT,
   SITE_NAME,
-  TWITTER_HANDLE,
   absoluteUrl,
 } from "@/lib/site";
 
@@ -83,8 +82,6 @@ const Seo = ({
     upsertMeta("property", "og:locale", "en_PH");
 
     upsertMeta("name", "twitter:card", "summary_large_image");
-    upsertMeta("name", "twitter:site", TWITTER_HANDLE);
-    upsertMeta("name", "twitter:creator", TWITTER_HANDLE);
     upsertMeta("name", "twitter:title", title);
     upsertMeta("name", "twitter:description", description);
     upsertMeta("name", "twitter:image", image);

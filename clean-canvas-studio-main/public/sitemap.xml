@@ -1,26 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://kienserapio.com/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-11</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://kienserapio.com/og-image.jpg</image:loc>
-      <image:title>Kien Serapio — Product Designer &amp; Software Engineer</image:title>
+      <image:title>Kien Serapio — Founder of Wika PH, AI Engineer &amp; Software Developer</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://kienserapio.com/about</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-11</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/events</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/awards</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/writing</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/wika-ph</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/dialecto</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/atlas</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/everythingos</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/onetup</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/wika-hq</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/devcon-agent-kit</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/logmark-ai</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/kpve</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/kap-group</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/sda-rentals</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/doc-on-call</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/rare-gem</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/bytheway</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/superkick</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/devcon-plus</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/work/eclipse</loc>
+    <lastmod>2026-10-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/writing/5-projects-devcon-intern</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.6</priority>
     <image:image>
-      <image:loc>https://kienserapio.com/Unknown-33.jpg</image:loc>
-      <image:title>Portrait of Kien Leriss R. Serapio</image:title>
+      <image:loc>https://kienserapio.com/writing/5-projects-devcon-intern/cover.webp</image:loc>
+      <image:title>I Built 5 Real Projects as a DEVCON Intern. Here’s What They Taught Me.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/writing/ai-wont-make-you-obsolete</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://kienserapio.com/writing/ai-wont-make-you-obsolete/cover.webp</image:loc>
+      <image:title>AI Won’t Make You Obsolete. Your Refusal to Adapt Will.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/writing/building-the-wrong-way</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://kienserapio.com/writing/building-the-wrong-way/cover.webp</image:loc>
+      <image:title>Why Most Developers Today Are Building the Wrong Way.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kienserapio.com/writing/inside-devcon-jumpstart-internship</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://kienserapio.com/writing/inside-devcon-jumpstart-internship/cover.webp</image:loc>
+      <image:title>Inside The Tech They Don’t Teach in School: My DEVCON Jumpstart Internship Journey</image:title>
     </image:image>
   </url>
 </urlset>

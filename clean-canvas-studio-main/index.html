@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kien Serapio — Product Designer &amp; Software Engineer</title>
+    <title>Kien Serapio — Founder of Wika PH, AI Engineer &amp; Software Developer</title>
     <meta
       name="description"
-      content="Kien Serapio — product designer and software engineer in Manila. Founder & CEO of Wika PH, AI engineering intern at NMBLR AI Foundry, BSCS at TUP Manila."
+      content="Kien Serapio is the Founder &amp; CEO of Wika PH, a PH100 Brightest Minds Under 30 honoree, and an AI engineer and software developer from Manila building offline AI, enterprise systems and apps used worldwide."
     />
     <link rel="canonical" href="https://kienserapio.com/" />
 
@@ -16,58 +16,59 @@
       name="robots"
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
-    <meta
-      name="keywords"
-      content="Kien Serapio, product designer Philippines, software engineer Manila, AI engineer Philippines, Wika PH, React developer Philippines, UI UX designer Manila, TUP Manila computer science, Claude Code, DEVCON Philippines, GDGoC TUP Manila"
-    />
     <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
 
     <!-- Icons -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Fonts are pulled in from index.css; warm the connection early -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- The hero portrait is the LCP element -->
+    <link rel="preload" as="image" href="/kien-cutout.webp" fetchpriority="high" />
+
+    <!-- Helvetica Neue ME (print→all pattern: non-blocking) -->
+    <link rel="preconnect" href="https://db.onlinewebfonts.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://db.onlinewebfonts.com/c/95cecf452d3208890088a5b4c19c7ecf?family=Helvetica+Neue+ME"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://db.onlinewebfonts.com/c/95cecf452d3208890088a5b4c19c7ecf?family=Helvetica+Neue+ME"
+      />
+    </noscript>
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="Kien Serapio" />
     <meta property="og:url" content="https://kienserapio.com/" />
-    <meta
-      property="og:title"
-      content="Kien Serapio — Product Designer &amp; Software Engineer"
-    />
+    <meta property="og:title" content="Kien Serapio — Founder of Wika PH, AI Engineer &amp; Software Developer" />
     <meta
       property="og:description"
-      content="Founder & CEO of Wika PH and AI engineering intern at NMBLR AI Foundry. I design and build AI products, mobile apps, and web platforms from concept to code."
+      content="Founder &amp; CEO of Wika PH and PH100 Brightest Minds Under 30. I build AI and software that reaches real people: 4,790 downloads in Wika's first month, offline AI tutors for classrooms, and enterprise systems that replace paper."
     />
     <meta property="og:image" content="https://kienserapio.com/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Kien Serapio — Product Designer and Software Engineer, Quezon City, Philippines"
-    />
+    <meta property="og:image:alt" content="Kien Serapio — Founder, AI Engineer, Software Developer. PH100 Brightest Minds Under 30." />
     <meta property="og:locale" content="en_PH" />
+    <meta property="profile:first_name" content="Kien" />
+    <meta property="profile:last_name" content="Serapio" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@KienSerapio" />
-    <meta name="twitter:creator" content="@KienSerapio" />
-    <meta
-      name="twitter:title"
-      content="Kien Serapio — Product Designer &amp; Software Engineer"
-    />
+    <meta name="twitter:title" content="Kien Serapio — Founder of Wika PH, AI Engineer &amp; Software Developer" />
     <meta
       name="twitter:description"
-      content="Founder & CEO of Wika PH and AI engineering intern at NMBLR AI Foundry. I design and build AI products, mobile apps, and web platforms from concept to code."
+      content="Founder &amp; CEO of Wika PH and PH100 Brightest Minds Under 30, building AI and software that reaches real people."
     />
     <meta name="twitter:image" content="https://kienserapio.com/og-image.jpg" />
-    <meta
-      name="twitter:image:alt"
-      content="Kien Serapio — Product Designer and Software Engineer, Quezon City, Philippines"
-    />
+    <meta name="twitter:image:alt" content="Kien Serapio — Founder, AI Engineer, Software Developer. PH100 Brightest Minds Under 30." />
 
     <!-- Structured data: who this site is about, for search engines and AI answer engines -->
     <script type="application/ld+json">
@@ -84,12 +85,8 @@
             "url": "https://kienserapio.com/",
             "image": "https://kienserapio.com/og-image.jpg",
             "email": "mailto:kienleriss28@gmail.com",
-            "jobTitle": [
-              "Product Designer",
-              "Software Engineer",
-              "Founder & CEO of Wika PH"
-            ],
-            "description": "Product designer and software engineer from Quezon City, Philippines. Founder and CEO of Wika PH, an EdTech startup teaching regional Filipino languages, and an AI engineering intern at NMBLR AI Foundry. Builds AI products, mobile apps, and web platforms from concept to code.",
+            "jobTitle": ["Founder & CEO of Wika PH", "AI Engineer", "Software Developer"],
+            "description": "Founder and Chief Executive Officer of Wika PH, a Philippine EdTech startup preserving and teaching regional Filipino languages. Recognized among StellarPH's PH100 Brightest Minds Under 30. A software developer and AI engineer specializing in automated workflows, offline and on-device AI, and enterprise systems.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Quezon City",
@@ -97,57 +94,46 @@
               "addressCountry": "PH"
             },
             "nationality": { "@type": "Country", "name": "Philippines" },
-            "alumniOf": {
-              "@type": "CollegeOrUniversity",
-              "name": "Technological University of the Philippines - Manila",
-              "sameAs": "https://www.tup.edu.ph/"
+            "worksFor": {
+              "@type": "Organization",
+              "@id": "https://wikaph.com/#organization",
+              "name": "Wika PH",
+              "url": "https://wikaph.com",
+              "description": "EdTech startup teaching the regional languages of the Philippines.",
+              "founder": { "@id": "https://kienserapio.com/#person" }
             },
-            "worksFor": [
-              {
-                "@type": "Organization",
-                "name": "Wika PH",
-                "url": "https://wikaph.com",
-                "description": "Language-learning EdTech startup teaching regional Filipino languages."
-              },
-              {
-                "@type": "Organization",
-                "name": "NMBLR AI Foundry",
-                "description": "AI foundry in Ortigas, Pasig City, builder of the Forge AI platform."
-              }
-            ],
             "knowsAbout": [
-              "Product Design",
-              "UI/UX Design",
-              "Software Engineering",
+              "Artificial Intelligence",
               "AI Engineering",
               "Large Language Models",
+              "Retrieval-Augmented Generation",
+              "On-device AI",
               "Agentic Workflows",
-              "RAG Pipelines",
-              "Prompt Engineering",
+              "Software Engineering",
               "React",
               "React Native",
               "Next.js",
               "TypeScript",
-              "Node.js",
               "PostgreSQL",
               "Supabase",
-              "Tailwind CSS",
-              "Figma",
-              "WordPress",
-              "Game Development"
+              "EdTech",
+              "Philippine languages",
+              "Product Design"
             ],
             "knowsLanguage": ["en", "fil"],
             "award": [
-              "1st Runner Up — Developer Camp Manila 2026 (Wika)",
-              "Most Fun Game, Major Award — Global Game Jam 2026",
-              "NCR Finalist Top 4 — Packethacks 2024 IoT",
-              "Bronze Awardee — StartUp QC 2024 Student Competition"
+              "PH100 Brightest Minds Under 30 — StellarPH (2026)",
+              "1st Runner-Up — Developer Camp Manila 2026",
+              "1st Place — Founders Live Manila (2026)",
+              "Silver Awardee — StartUp QC Batch 3 (2026)",
+              "Most Fun Game — Global Game Jam 2026 CIIT"
             ],
             "sameAs": [
               "https://www.linkedin.com/in/kienserapio",
               "https://github.com/kienserapio",
+              "https://www.facebook.com/kienserapio28",
               "https://medium.com/@kienserapio",
-              "https://x.com/KienSerapio"
+              "https://stellarph.io/programs/ph100/2026"
             ]
           },
           {
@@ -155,7 +141,7 @@
             "@id": "https://kienserapio.com/#website",
             "url": "https://kienserapio.com/",
             "name": "Kien Serapio",
-            "description": "Portfolio of Kien Serapio — product designer and software engineer in Manila, Philippines.",
+            "description": "Personal website of Kien Serapio — Founder of Wika PH, AI engineer and software developer in Manila, Philippines.",
             "inLanguage": "en",
             "publisher": { "@id": "https://kienserapio.com/#person" },
             "about": { "@id": "https://kienserapio.com/#person" }
@@ -164,9 +150,9 @@
             "@type": "ProfilePage",
             "@id": "https://kienserapio.com/#webpage",
             "url": "https://kienserapio.com/",
-            "name": "Kien Serapio — Product Designer & Software Engineer",
+            "name": "Kien Serapio — Founder of Wika PH, AI Engineer & Software Developer",
             "isPartOf": { "@id": "https://kienserapio.com/#website" },
-            "about": { "@id": "https://kienserapio.com/#person" },
+            "mainEntity": { "@id": "https://kienserapio.com/#person" },
             "primaryImageOfPage": "https://kienserapio.com/og-image.jpg",
             "inLanguage": "en"
           }
@@ -179,24 +165,27 @@
     <div id="root"></div>
 
     <noscript>
-      <h1>Kien Serapio — Product Designer &amp; Software Engineer</h1>
+      <h1>Kien Serapio — Founder of Wika PH, AI Engineer &amp; Software Developer</h1>
       <p>
-        Kien Leriss R. Serapio is a product designer and software engineer based
-        in Quezon City, Philippines. He is the Founder &amp; CEO of
-        <a href="https://wikaph.com">Wika PH</a>, an AI Engineering Intern at
-        NMBLR AI Foundry, and a BS Computer Science student at the
-        Technological University of the Philippines &mdash; Manila.
+        Kien Leriss R. Serapio is the Founder and Chief Executive Officer of
+        <a href="https://wikaph.com">Wika PH</a>, a Philippine EdTech startup
+        dedicated to preserving and teaching regional Filipino languages. He is
+        recognized among StellarPH's PH100 Brightest Minds Under 30, and works
+        as a software developer and AI engineer.
       </p>
       <p>
-        Selected work: Wika (Filipino language-learning app), DEVCON+ (member
-        platform for 11 DEVCON chapters), AKBAI (AI travel planner), Sinag,
-        Kolehiyo, and Centro.
+        Work: Wika PH (4,790 App Store downloads in its first month), Dialecto
+        (an offline AI tutor for six Philippine languages), ATLAS by Equilife
+        Medical, EverythingOS, OneTUP and Wika HQ.
       </p>
       <ul>
-        <li><a href="https://kienserapio.com/about">About &amp; experience</a></li>
+        <li><a href="https://kienserapio.com/about">About</a></li>
+        <li><a href="https://kienserapio.com/work">Work</a></li>
+        <li><a href="https://kienserapio.com/events">Events &amp; speaking</a></li>
+        <li><a href="https://kienserapio.com/awards">Awards</a></li>
+        <li><a href="https://kienserapio.com/writing">Writing</a></li>
         <li><a href="https://www.linkedin.com/in/kienserapio">LinkedIn</a></li>
         <li><a href="https://github.com/kienserapio">GitHub</a></li>
-        <li><a href="https://medium.com/@kienserapio">Medium</a></li>
       </ul>
       <p>This site needs JavaScript enabled for the full experience.</p>
     </noscript>

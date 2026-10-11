@@ -1,21 +1,17 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { scrollToId, scrollToTop } from "@/lib/lenis";
 
 export function useScrollToHash() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      // Remove the '#' to get the ID
       const id = hash.replace("#", "");
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
-    } else {
-      window.scrollTo(0, 0); // Scroll to top if no hash
+      // Let the page-transition enter finish before gliding to the section.
+      const t = setTimeout(() => scrollToId(id), 450);
+      return () => clearTimeout(t);
     }
+    scrollToTop(true);
   }, [pathname, hash]);
 }

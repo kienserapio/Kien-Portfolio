@@ -1,496 +1,268 @@
+import { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import Seo from "@/components/Seo";
-import NavBar from "@/components/portfolio/NavBar";
-import Footer from "@/components/portfolio/Footer";
-// import portrait from "@/assets/about-portrait.jpg";
-const portrait = "/Unknown-33.jpg";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Reveal, SplitWords } from "@/components/fx/Reveal";
 import {
-  ReactIcon,
-  ExpoIcon,
-  NextIcon,
-  NodeIcon,
-  TSIcon,
-  PostgresIcon,
-  TailwindIcon,
-  FigmaIcon,
-  WordPressIcon,
-  PhotoshopIcon,
-  IllustratorIcon,
-  MonoLogo,
-} from "../components/portfolio/icons";
-import { PERSON_ID, SITE_URL, SOCIAL_LINKS } from "@/lib/site";
+  IconApi,
+  IconBrain,
+  IconBrandAdobe,
+  IconBrandFigma,
+  IconBrandFramer,
+  IconBrandNextjs,
+  IconBrandNodejs,
+  IconBrandPython,
+  IconBrandReact,
+  IconBrandReactNative,
+  IconBrandSupabase,
+  IconBrandTypescript,
+  IconBrandWebflow,
+  IconChartDots,
+  IconComponents,
+  IconCpu,
+  IconDatabase,
+  IconDeviceMobile,
+  IconFileSearch,
+  IconHierarchy,
+  IconPrompt,
+  IconRobot,
+  IconScan,
+  IconTerminal2,
+  type Icon,
+} from "@tabler/icons-react";
+import Cta from "@/components/kit/Cta";
+import { openCv } from "@/components/CvModal";
+import { BIONOTE, EMAIL, experiences, FULL_NAME, SKILLS, type Experience } from "@/data/profile";
+import { extras } from "@/data/projects";
+import { PERSON_ID, SITE_URL } from "@/lib/site";
 
-type Exp = {
-  company: string;
-  role: string;
-  date: string;
-  bullets: string[];
-  pillClass: string;
-  logo: { label?: string; bg?: string; fg?: string; src?: string };
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${SITE_URL}/about#webpage`,
+  url: `${SITE_URL}/about`,
+  name: "About Kien Serapio",
+  mainEntity: { "@id": PERSON_ID },
 };
 
-const experiences: Exp[] = [
-  {
-    company: "Wika PH",
-    role: "Founder & CEO",
-    date: "2026 — Present",
-    pillClass: "glass-purple",
-    logo: { src: "/logos/icon.png" },
-    bullets: [
-      "Leading product, design, and engineering for a Filipino-first language platform.",
-      "Defining brand, strategy, and end-to-end user experience.",
-    ],
-  },
-  {
-    company: "NMBLR AI Foundry",
-    role: "AI Engineering Intern",
-    date: "Jun 2026 — Jul 2027",
-    pillClass: "glass-pink",
-    logo: { src: "/logos/nmblr-mark.jpg" },
-    bullets: [
-      "Ran structured testing and evaluation cycles for Forge, the company’s core AI technology.",
-      "Built enterprise-grade AI workflows and data dashboards with Claude Code, accelerating multi-agent orchestration pipelines.",
-    ],
-  },
-  {
-    company: "KadaKareer",
-    role: "Product Engineering — Junior Mission Specialist",
-    date: "Jan 2026",
-    pillClass: "glass-navy",
-    logo: { src: "/logos/kadakareer_logo.jpeg" },
-    bullets: [
-      "Re-engineered the “Koach” interface for clarity, speed, and accessibility.",
-      "Owned cross-browser testing and shipped UI fixes across the product surface.",
-    ],
-  },
-  {
-    company: "DEVCON Philippines",
-    role: "Product Designer & Project Manager",
-    date: "Jan 2026 - Apr 2026",
-    pillClass: "glass-vpurple",
-    logo: { src: "/logos/devcon.jpg" },
-    bullets: [
-      "Architected an AI-automated design workflow using Google Stitch + Figma.",
-      "Built the DEVCON+ R&D beta prototype in React with Claude Code.",
-    ],
-  },
-  {
-    company: "DEVCON Philippines",
-    role: "Full Stack Developer & Studios Intern",
-    date: "Sept 2025 — Jan 2026",
-    pillClass: "glass-vpurple",
-    logo: { src: "/logos/devcon.jpg" },
-    bullets: [
-      "Engineered dApps on the Internet Computer Protocol (ICP).",
-      "Pioneered work inside the Caffeine AI ecosystem.",
-    ],
-  },
-  {
-    company: "Easybus PH",
-    role: "UI/UX Intern",
-    date: "July 2025 - Nov 2025",
-    pillClass: "glass-navy-yellow",
-    logo: { src: "/logos/easybus.png" },
-    bullets: [
-      "Designed prototypes for Ohayami Trans and DLTB Co.",
-      "Translated rider research into clean, conversion-driven flows.",
-    ],
-  },
-  {
-    company: "Globe Telecom",
-    role: "Digital and Social Media Operations Intern",
-    date: "Apr 2025 - July 2025",
-    pillClass: "glass-cyan",
-    logo: { src: "/logos/globe.png" },
-    bullets: [
-      "Developed key visuals for GlobeICON.",
-      "Supported social campaigns reaching a national audience.",
-    ],
-  },
-    {
-    company: "Widustalk Academy",
-    role: "Junior Graphic Designer",
-    date: "Feb 2023 - Aug 2023",
-    pillClass: "",
-    logo: { src: "/logos/widustalk.jpeg"},
-    bullets: [
-      "Designed digital assets for Lingoloco, Bobjo, Mango Rush and Bueno.",
-      "Increased social media engagement with a reach of 9,000+ followers",
-    ],
-  },
+const STORY = [
+  "I started in design: brand assets and social cards for small brands and for Globe, then booking flows and websites for bus lines serving more than 5,000 commuters a month.",
+  "Design pulled me into code. At DEVCON Philippines I built the design system and features for DEVCON+, the hub for its 11 chapters. At NMBLR AI Foundry I tested and evaluated Forge and built agent tooling that runs across Claude Code, Cursor and OpenCode.",
+  "In 2026 I founded Wika PH to teach the languages of the Philippines. In its first month on the App Store it welcomed more than 2,000 new learners, 39% of them outside the country. Dialecto, an offline tutor that speaks six Philippine languages, grew out of the same mission.",
+  "I also lead engineering on systems that replace paper with software: ATLAS for Equilife Medical, and web and mobile products for teams in Australia and beyond.",
 ];
 
-const leadership = [
-  {
-    org: "Google Developer Group on Campus — TUP Manila",
-    role: "President / Chapter Organizer",
-    note: "Manage 100+ executives. Facilitate workshops on Firebase, Flutter, and Gemini.",
-    logo: { src: "/logos/GDGOC LOGO.png" },
-  },
-  {
-    org: "DEVCON Manila",
-    role: "Vice President of Technology",
-    note: "Execute Code Camps focused on AI and Blockchain.",
-    logo: { src: "/logos/devcon.jpg" },
-  },
-  {
-    org: "TUP USG Manila",
-    role: "Vice Governor — College of Science Student Council",
-    note: "Impacted 1,500+ students and boosted event productivity.",
-    logo: { src: "/logos/usg.jpeg" },
-  },
+const COMMUNITY = [
+  "GDGoC TUP Manila: President & Chapter Organizer (2025–26), Co-Lead (2026–27)",
+  "DEVCON Manila: Vice President of Technology",
 ];
 
-const techStack = [
-  { name: "React", Icon: ReactIcon },
-  { name: "React Native (Expo)", Icon: ExpoIcon },
-  { name: "Next.js", Icon: NextIcon },
-  { name: "Node.js", Icon: NodeIcon },
-  { name: "TypeScript", Icon: TSIcon },
-  { name: "PostgreSQL", Icon: PostgresIcon },
-  { name: "Tailwind CSS", Icon: TailwindIcon },
+/** An icon per skill; brand marks where one exists. Unknown skills fall back to a neutral glyph. */
+const SKILL_ICON: Record<string, Icon> = {
+  React: IconBrandReact,
+  "React Native": IconBrandReactNative,
+  "Next.js": IconBrandNextjs,
+  TypeScript: IconBrandTypescript,
+  "Node.js": IconBrandNodejs,
+  Python: IconBrandPython,
+  PostgreSQL: IconDatabase,
+  Supabase: IconBrandSupabase,
+  Expo: IconDeviceMobile,
+  FastAPI: IconApi,
+  "LLM integration": IconBrain,
+  "RAG pipelines": IconFileSearch,
+  "Agentic workflows": IconRobot,
+  "On-device inference": IconCpu,
+  "OCR document extraction": IconScan,
+  "Prompt engineering": IconPrompt,
+  Evaluation: IconChartDots,
+  "Claude Code": IconTerminal2,
+  Figma: IconBrandFigma,
+  "Design systems": IconComponents,
+  Framer: IconBrandFramer,
+  Webflow: IconBrandWebflow,
+  "Adobe Creative Suite": IconBrandAdobe,
+};
+
+const SKILL_GROUPS: { label: string; items: string[] }[] = [
+  { label: "Build", items: SKILLS.build },
+  { label: "AI", items: SKILLS.ai },
+  { label: "Design", items: SKILLS.design },
 ];
 
-const designStack = [
-  { name: "Figma", Icon: FigmaIcon },
-  { name: "WordPress + Elementor", Icon: WordPressIcon },
-  { name: "Adobe Photoshop", Icon: PhotoshopIcon },
-  { name: "Adobe Illustrator", Icon: IllustratorIcon },
-];
+const Mark = ({ e }: { e: Experience }) =>
+  e.logo ? (
+    <img src={e.logo} alt="" loading="lazy" decoding="async" className="h-10 w-10 rounded-xl border border-ink/10 bg-white object-cover" />
+  ) : (
+    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-ink text-xs font-medium tracking-wide text-white">
+      {e.monogram ?? e.company.slice(0, 2).toUpperCase()}
+    </span>
+  );
 
-const TITLE = "About Kien Serapio — Product Designer & Software Engineer";
+/**
+ * Experience timeline: a graphite line that draws as you scroll, sticky dates
+ * on desktop. (Same idea as Aceternity's Timeline, in the site's palette.)
+ */
+const Timeline = () => {
+  const ref = useRef<HTMLOListElement>(null);
+  const [height, setHeight] = useState(0);
+  const reduce = useReducedMotion();
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setHeight(el.getBoundingClientRect().height));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 30%", "end 60%"] });
+  const line = useTransform(scrollYProgress, [0, 1], [0, height]);
 
-const DESCRIPTION =
-  "Kien Serapio's work history: Founder & CEO of Wika PH, AI Engineering Intern at NMBLR AI Foundry, DEVCON, Globe Telecom, and GDGoC TUP Manila president.";
-
-/** Longer form, for structured data where there is no length budget. */
-const BIO =
-  "Kien Leriss R. Serapio is the Founder & CEO of Wika PH, an AI Engineering Intern at NMBLR AI Foundry, and a BS Computer Science student at the Technological University of the Philippines — Manila. He works across product design, AI engineering, and full stack development.";
-
-/** Module scope keeps the object reference stable across renders. */
-const ABOUT_JSON_LD = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "AboutPage",
-      "@id": `${SITE_URL}/about#webpage`,
-      url: `${SITE_URL}/about`,
-      name: TITLE,
-      description: DESCRIPTION,
-      inLanguage: "en",
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      mainEntity: { "@id": PERSON_ID },
-      primaryImageOfPage: `${SITE_URL}/Unknown-33.jpg`,
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${SITE_URL}/about#breadcrumb`,
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "About", item: `${SITE_URL}/about` },
-      ],
-    },
-    {
-      "@type": "Person",
-      "@id": PERSON_ID,
-      name: "Kien Serapio",
-      alternateName: "Kien Leriss R. Serapio",
-      url: `${SITE_URL}/`,
-      image: `${SITE_URL}/og-image.jpg`,
-      description: BIO,
-      sameAs: SOCIAL_LINKS,
-      alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "Technological University of the Philippines - Manila",
-      },
-      hasOccupation: [
-        ...experiences.map((e) => ({
-          "@type": "Occupation",
-          name: e.role,
-          description: `${e.role} at ${e.company} (${e.date}). ${e.bullets.join(" ")}`,
-          hiringOrganization: { "@type": "Organization", name: e.company },
-        })),
-        ...leadership.map((l) => ({
-          "@type": "Occupation",
-          name: l.role,
-          description: `${l.role}, ${l.org}. ${l.note}`,
-          hiringOrganization: { "@type": "Organization", name: l.org },
-        })),
-      ],
-      knowsAbout: [...techStack, ...designStack].map((t) => t.name),
-    },
-  ],
+  return (
+    <ol ref={ref} className="relative mt-14">
+      <div aria-hidden className="absolute left-[19px] top-0 w-px bg-ink/10" style={{ height }}>
+        <motion.div className="absolute inset-x-0 top-0 w-px bg-ink" style={{ height: reduce ? height : line }} />
+      </div>
+      {experiences.map((e) => (
+        <li key={`${e.company}-${e.role}`} className="relative grid gap-4 pb-16 pl-14 md:grid-cols-[14rem_1fr] md:gap-10 md:pl-0">
+          <div className="md:sticky md:top-32 md:self-start md:pl-14">
+            <span aria-hidden className="absolute left-[13px] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-white bg-ink shadow-[0_0_0_1px_rgba(29,29,31,0.15)]" />
+            <div className="text-sm font-medium text-ink/45">{e.date}</div>
+          </div>
+          <Reveal y={20}>
+            <div className="flex items-center gap-3">
+              <Mark e={e} />
+              <div>
+                <h3 className="font-hn text-xl font-medium leading-tight tracking-[-0.02em] text-ink sm:text-2xl">{e.role}</h3>
+                <p className="text-ink/60">
+                  {e.company}
+                  {e.place ? ` · ${e.place}` : ""}
+                </p>
+              </div>
+            </div>
+            <ul className="mt-5 flex max-w-2xl flex-col gap-3">
+              {e.bullets.map((b) => (
+                <li key={b} className="relative pl-5 leading-relaxed text-ink/70 before:absolute before:left-0 before:top-[0.7em] before:h-1 before:w-1 before:rounded-full before:bg-ink/30">
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </li>
+      ))}
+    </ol>
+  );
 };
 
 const About = () => {
-  useScrollReveal();
+  const headshot = extras.headshot;
+  const reduce = useReducedMotion();
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="relative z-10 pb-40 pt-32 sm:pt-40">
       <Seo
-        title={TITLE}
-        description={DESCRIPTION}
+        title="About — Kien Serapio"
+        description="Kien Leriss R. Serapio is the Founder & CEO of Wika PH, a PH100 Brightest Minds Under 30 honoree, and an AI Engineer & Software Developer from Quezon City, Philippines."
         path="/about"
         type="profile"
-        jsonLd={ABOUT_JSON_LD}
+        jsonLd={JSON_LD}
       />
-      <NavBar />
 
-      {/* Hero / Intro */}
-      <section className="px-6 pt-20 md:pt-28 pb-16">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-          {/* Portrait */}
-          <div
-            className="md:col-span-5 reveal-up"
-            style={{ ["--delay" as any]: "100ms" }}
-          >
-            <div className="relative group transition-transform duration-500 ease-out hover:scale-[1.03]">
-              <div className="absolute -top-4 -left-4 glass glass-pill glass-mint text-mint-foreground text-[11px] font-bold tracking-widest px-3 py-1.5 rounded-full rotate-[-6deg] z-10">
-                ABOUT ME
-              </div>
-              <div className="absolute -bottom-4 -right-4 glass glass-pill glass-tan text-tan-foreground text-[11px] font-bold tracking-widest px-3 py-1.5 rounded-full rotate-[6deg] z-10">
-                TUP MANILA
-              </div>
-              <div className="figma-frame rounded-2xl overflow-hidden bg-background">
-                <span className="handle bl" />
-                <span className="handle br" />
-                <span className="handle tm" />
-                <span className="handle bm" />
-                <span className="handle lm" />
-                <span className="handle rm" />
-                <img
-                  src={portrait}
-                  alt="Portrait of Kien Leriss R. Serapio"
-                  className="w-full h-auto object-cover aspect-[4/5] transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="eager"
-                />
-              </div>
-            </div>
-          </div>
+      {/* Hero */}
+      <section className="mx-auto grid max-w-7xl items-end gap-12 px-6 sm:px-10 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+        <motion.div
+          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 40, filter: "blur(12px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)", transitionEnd: { filter: "none" } }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] bg-[#f2f2f4]"
+          data-sfx-hover="hoverImage"
+        >
+          {headshot ? (
+            <img src={headshot.src} alt={headshot.alt || "Kien Serapio"} width={headshot.w} height={headshot.h} className="absolute inset-0 h-full w-full object-cover" />
+          ) : (
+            <img src="/kien-cutout.webp" alt="Kien Serapio" width={1180} height={1130} className="absolute inset-x-0 bottom-0 h-[92%] w-full object-cover object-[45%_0%]" />
+          )}
+        </motion.div>
 
-          {/* Identity */}
-          <div className="md:col-span-7">
-            <div
-              className="font-script text-2xl md:text-3xl reveal-up"
-              style={{ ["--delay" as any]: "200ms" }}
-            >
-              hi, kamusta — I'm
-            </div>
-            <h1
-              className="mt-3 font-display font-bold text-5xl md:text-7xl tracking-tighter leading-[0.95] title-gradient reveal-up"
-              style={{ ["--delay" as any]: "320ms" }}
-            >
-              Kien Leriss R.
-              <br />
-              Serapio
-            </h1>
+        <div>
+          <Reveal y={12} className="eyebrow">
+            About
+          </Reveal>
+          <SplitWords as="h1" immediate text="Kien Serapio" className="mt-4 font-hn text-6xl font-medium leading-[0.95] tracking-[-0.045em] text-ink sm:text-8xl" />
+          <Reveal delay={0.15} className="mt-4 text-lg text-ink/55 sm:text-xl">
+            Founder · AI Engineer · Software Developer
+          </Reveal>
+          <Reveal delay={0.2} className="mt-1 text-sm text-ink/40">
+            Quezon City, Philippines
+          </Reveal>
+          <Reveal delay={0.25} className="mt-8 max-w-xl text-lg leading-relaxed text-ink/75">
+            {BIONOTE}
+          </Reveal>
+          <Reveal delay={0.3} className="mt-3 text-sm text-ink/40">
+            {FULL_NAME}
+          </Reveal>
+        </div>
+      </section>
 
-            <h2
-              className="mt-6 font-display font-medium text-xl md:text-2xl tracking-tight leading-snug reveal-up"
-              style={{ ["--delay" as any]: "450ms" }}
-            >
-              Founder & CEO of{" "}
-              <span className="font-script not-italic font-normal text-2xl md:text-3xl align-middle">
-                Wika PH
-              </span>{" "}
-              <span className="text-muted-foreground">|</span> Product Designer & Software Engineer.
-            </h2>
-
-            <p
-              className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed reveal-fade"
-              style={{ ["--delay" as any]: "600ms" }}
-            >
-              BS Computer Science student at <span className="text-foreground font-medium">TUP Manila</span> bridging the gap between
-              high-fidelity design and scalable engineering. I obsess over the
-              tiny details that make products feel inevitable.
-            </p>
-
-            <div
-              className="mt-8 flex flex-wrap gap-2 reveal-fade"
-              style={{ ["--delay" as any]: "750ms" }}
-            >
-              {[
-                { t: "FOUNDER", c: "glass-yellow" },
-                { t: "ENGINEER", c: "glass-green" },
-                { t: "DESIGNER", c: "glass-red" },
-                { t: "COMMUNITY", c: "glass-blue" },
-              ].map((p) => (
-                <span
-                  key={p.t}
-                  className={`glass glass-pill ${p.c} text-[11px] font-bold tracking-widest px-3 py-1.5 rounded-full transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-0.5 cursor-default`}
-                >
-                  {p.t}
-                </span>
-              ))}
-            </div>
-          </div>
+      {/* Story */}
+      <section aria-label="My story" className="mx-auto mt-32 max-w-3xl px-6 sm:px-10">
+        <Reveal y={12} className="eyebrow">
+          My story
+        </Reveal>
+        <SplitWords as="h2" text="From pixels to products to a company." className="mt-4 font-hn text-4xl font-medium leading-[1.02] tracking-[-0.035em] text-ink sm:text-6xl" />
+        <div className="mt-10 flex flex-col gap-6">
+          {STORY.map((p, i) => (
+            <Reveal key={i} delay={i * 0.05} className="text-lg leading-relaxed text-ink/70 sm:text-xl">
+              {p}
+            </Reveal>
+          ))}
         </div>
       </section>
 
       {/* Experience */}
-      <section className="px-6 py-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center scroll-reveal">
-            <div className="font-script text-2xl md:text-3xl underline decoration-1 underline-offset-4">
-              the journey so far
-            </div>
-            <h2 className="mt-3 font-display font-bold text-4xl md:text-6xl tracking-tighter title-gradient">
-              MY WORK EXPERIENCES
-            </h2>
-          </div>
-
-          <ol className="mt-14 relative border-l border-border ml-3 md:ml-6 space-y-8">
-            {experiences.map((e, i) => (
-              <li
-                key={`${e.company}-${i}`}
-                className="pl-6 md:pl-10 relative scroll-reveal"
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                <span className="absolute -left-[7px] top-6 w-3 h-3 rounded-full bg-foreground" />
-                <div className="glass glass-card-glow rounded-2xl p-5 md:p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.015]">
-                  <div className="flex items-start gap-4">
-                    {e.logo.src ? (
-                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-md overflow-hidden bg-white/10 p-2">
-                        <img src={e.logo.src} alt={e.company} className="w-full h-full rounded-full object-contain" />
-                      </div>
-                    ) : (
-                      <MonoLogo label={e.logo.label!} bg={e.logo.bg!} fg={e.logo.fg} />
-                    )}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <span
-                          className={`glass glass-pill ${e.pillClass} text-[10px] md:text-[11px] font-bold tracking-widest px-3 py-1 rounded-full`}
-                        >
-                          {e.company}
-                        </span>
-                        <span className="text-[10px] md:text-[11px] tracking-widest text-muted-foreground">
-                          {e.date}
-                        </span>
-                      </div>
-                      <div className="font-display font-bold text-xl md:text-2xl tracking-tight">
-                        {e.role}
-                      </div>
-                      <ul className="mt-3 space-y-1.5 text-sm md:text-base text-muted-foreground">
-                        {e.bullets.map((b) => (
-                          <li key={b} className="flex gap-2">
-                            <span className="text-foreground/60 mt-1.5 w-1 h-1 rounded-full bg-foreground/60 shrink-0" />
-                            <span>{b}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center scroll-reveal">
-            <div className="font-script text-2xl md:text-3xl underline decoration-1 underline-offset-4">
-              giving back
-            </div>
-            <h2 className="mt-3 font-display font-bold text-4xl md:text-6xl tracking-tighter title-gradient">
-              LEADERSHIP & COMMUNITY
-            </h2>
-          </div>
-
-          <div className="mt-12 grid md:grid-cols-3 gap-5">
-            {leadership.map((l, i) => (
-              <div
-                key={l.org}
-                className="glass glass-card-glow rounded-3xl p-6 scroll-reveal transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03]"
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
-                {l.logo.src ? (
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-md overflow-hidden bg-white/10 p-2">
-                    <img src={l.logo.src} alt={l.org} className="w-full h-full object-contain rounded-full" />
-                  </div>
-                ) : (
-                  <MonoLogo label={l.logo.label!} bg={l.logo.bg!} />
-                )}
-                <div className="mt-4 text-[10px] font-bold tracking-widest text-muted-foreground">
-                  {l.role}
-                </div>
-                <div className="mt-2 font-display font-bold text-lg md:text-xl tracking-tight leading-snug">
-                  {l.org}
-                </div>
-                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                  {l.note}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <section aria-labelledby="experience" className="mx-auto mt-32 max-w-5xl px-6 sm:px-10">
+        <Reveal y={12} className="eyebrow">
+          Experience
+        </Reveal>
+        <h2 id="experience" className="mt-4 font-hn text-4xl font-medium tracking-[-0.035em] text-ink sm:text-6xl">
+          Where I’ve shipped.
+        </h2>
+        <Timeline />
       </section>
 
       {/* Skills */}
-      <section className="px-6 py-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center scroll-reveal">
-            <div className="font-script text-2xl md:text-3xl underline decoration-1 underline-offset-4">
-              the toolbox
-            </div>
-            <h2 className="mt-3 font-display font-bold text-4xl md:text-6xl tracking-tighter title-gradient">
-              MY TECHNICAL SKILLS
-            </h2>
-          </div>
-
-          <div className="mt-12 grid md:grid-cols-2 gap-6">
-            <div
-              className="glass glass-card-glow rounded-3xl p-6 md:p-8 scroll-reveal transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02]"
-              style={{ transitionDelay: "0ms" }}
-            >
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-cyan shadow-[0_0_10px_hsl(var(--cyan))]" />
-                <div className="text-[10px] font-bold tracking-widest text-muted-foreground">
-                  TECH STACK
-                </div>
-              </div>
-              <div className="mt-5 flex flex-wrap gap-2.5">
-                {techStack.map(({ name, Icon }) => (
-                  <span
-                    key={name}
-                    className="glass glass-pill text-xs md:text-sm font-bold tracking-tight px-4 py-2 rounded-full inline-flex items-center gap-2 transition-transform duration-200 ease-out hover:scale-110 hover:-translate-y-0.5 cursor-default"
-                  >
-                    <Icon />
-                    {name}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div
-              className="glass glass-card-glow rounded-3xl p-6 md:p-8 scroll-reveal transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02]"
-              style={{ transitionDelay: "120ms" }}
-            >
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-pink shadow-[0_0_10px_hsl(var(--pink))]" />
-                <div className="text-[10px] font-bold tracking-widest text-muted-foreground">
-                  DESIGN STACK
-                </div>
-              </div>
-              <div className="mt-5 flex flex-wrap gap-2.5">
-                {designStack.map(({ name, Icon }) => (
-                  <span
-                    key={name}
-                    className="glass glass-pill glass-tan text-tan-foreground text-xs md:text-sm font-bold tracking-tight px-4 py-2 rounded-full inline-flex items-center gap-2 transition-transform duration-200 ease-out hover:scale-110 hover:-translate-y-0.5 cursor-default"
-                  >
-                    <Icon />
-                    {name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+      <section aria-labelledby="skills" className="mx-auto mt-16 max-w-5xl px-6 sm:px-10">
+        <h2 id="skills" className="font-hn text-3xl font-medium tracking-[-0.03em] text-ink sm:text-4xl">
+          What I work with
+        </h2>
+        <div className="mt-10 grid gap-10 sm:grid-cols-3">
+          {SKILL_GROUPS.map((g, i) => (
+            <Reveal key={g.label} delay={i * 0.06}>
+              <div className="eyebrow">{g.label}</div>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {g.items.map((s) => {
+                  const Glyph = SKILL_ICON[s] ?? IconHierarchy;
+                  return (
+                    <li key={s} className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white py-1.5 pl-2.5 pr-3.5 text-sm text-ink/75">
+                      <Glyph size={16} stroke={1.6} className="shrink-0 text-ink/70" aria-hidden />
+                      {s}
+                    </li>
+                  );
+                })}
+              </ul>
+            </Reveal>
+          ))}
         </div>
-      </section>
 
-      <Footer />
+        <Reveal className="mt-16 border-t border-ink/10 pt-6 text-sm leading-relaxed text-ink/45">
+          <span className="text-ink/60">Community:</span> {COMMUNITY.join(" · ")}
+        </Reveal>
+
+        <Reveal className="mt-16 flex flex-wrap gap-3">
+          <Cta onClick={openCv}>View resume</Cta>
+          <Cta href={`mailto:${EMAIL}`} variant="secondary">
+            Email me
+          </Cta>
+        </Reveal>
+      </section>
     </main>
   );
 };

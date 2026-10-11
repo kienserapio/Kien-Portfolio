@@ -1,0 +1,948 @@
+{
+  "wika-ph": {
+    "cover": "/work/wika-ph/sim-5.webp",
+    "images": [
+      {
+        "src": "/work/wika-ph/sim-1.webp",
+        "alt": "Wika PH app: My Dictionary: words and phrases earned from lessons",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/wika-ph/sim-2.webp",
+        "alt": "Wika PH app: Practice rounds: beat the clock, earn XP and Gold",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/wika-ph/sim-3.webp",
+        "alt": "Wika PH app: Profile with Pioneer badge, rank, streak and tokens",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/wika-ph/sim-4.webp",
+        "alt": "Wika PH app: Pangkat league standings",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/wika-ph/sim-5.webp",
+        "alt": "Wika PH app: Unit 1 learning path: Sounds of the Islands",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/wika-ph/sim-6.webp",
+        "alt": "Wika PH app: All-time leaderboard podium",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/wika-ph/sim-7.webp",
+        "alt": "Wika PH app: Shop: streak freezes, XP boosts and heart shields",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/wika-ph/05-first-month.webp",
+        "alt": "'Salamat sa First Month!' graphic: 4,950+ downloads, 1,370+ weekly learners, 14,356 lessons learned",
+        "kind": "poster",
+        "w": 1200,
+        "h": 1500
+      },
+      {
+        "src": "/work/wika-ph/06-update-v1-1.webp",
+        "alt": "Wika PH v1.1 update graphic listing leaderboards, shop, referral codes and Pioneer badges",
+        "kind": "poster",
+        "w": 1200,
+        "h": 1500
+      }
+    ],
+    "logo": "/work/wika-ph/logo.webp"
+  },
+  "dialecto": {
+    "cover": "/work/dialecto/cover.webp",
+    "images": [
+      {
+        "src": "/work/dialecto/01-ask-hari.webp",
+        "alt": "Dialecto 'Ask' mode: Hari answers 'Why is the leaf green?' in Cebuano with English glosses and the dictionary words it used",
+        "kind": "phone",
+        "w": 780,
+        "h": 1688
+      },
+      {
+        "src": "/work/dialecto/02-home.webp",
+        "alt": "Dialecto home: language islands for Cebuano, Ilocano, Hiligaynon and Bikol, with 'Hari knows 17,415 Cebuano words'",
+        "kind": "phone",
+        "w": 780,
+        "h": 1688
+      },
+      {
+        "src": "/work/dialecto/03-lesson.webp",
+        "alt": "Grade 2 Cebuano lesson 'Mga Bahin sa Tanom' (Parts of a Plant) with read-aloud audio for each sentence",
+        "kind": "phone",
+        "w": 780,
+        "h": 1688
+      },
+      {
+        "src": "/work/dialecto/04-quiz-correct.webp",
+        "alt": "Lesson quiz: 'Asa makit-an ang gamut?' answered correctly with 'Maayo kaayo!' feedback",
+        "kind": "phone",
+        "w": 780,
+        "h": 1688
+      },
+      {
+        "src": "/work/dialecto/05-word-card.webp",
+        "alt": "Tap-to-define word card for the Cebuano word 'klorofil' (chlorophyll) sourced from Wiktionary",
+        "kind": "phone",
+        "w": 780,
+        "h": 1688
+      },
+      {
+        "src": "/work/dialecto/06-teacher.webp",
+        "alt": "Teacher dashboard: make a lesson from any topic, build one from a PDF, and track a class",
+        "kind": "phone",
+        "w": 780,
+        "h": 1688
+      }
+    ],
+    "video": {
+      "src": "/work/dialecto/demo.mp4",
+      "poster": "/work/dialecto/demo-poster.webp",
+      "w": 402,
+      "h": 904
+    },
+    "logo": "/work/dialecto/logo.webp"
+  },
+  "atlas": {
+    "cover": "/work/atlas/cover.webp",
+    "images": [
+      {
+        "src": "/work/atlas/01-operations-dashboard.webp",
+        "alt": "ATLAS operations dashboard: fleet of 9,630 machines, standby, defective, open work orders and overdue preventive maintenance",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 918
+      },
+      {
+        "src": "/work/atlas/02-census.webp",
+        "alt": "ATLAS live census: 4,475 machines held across 73 facilities, with hooked, standby, defective and in-transit counts per site (facility names blurred)",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 905
+      },
+      {
+        "src": "/work/atlas/03-approvals.webp",
+        "alt": "ATLAS approvals queue with 17 pending sales orders, requisitions and issuances, each with approve and reject actions",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 909
+      },
+      {
+        "src": "/work/atlas/04-purchase-order-trail.webp",
+        "alt": "Purchase order side sheet showing a send-back from the approver, line items, VAT and the approval trail",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 959
+      },
+      {
+        "src": "/work/atlas/05-invoice.webp",
+        "alt": "Printable rental invoice with provisional numbering, credit and void lines, and certification block (demo data; hospital and serials blurred)",
+        "kind": "desktop",
+        "w": 628,
+        "h": 892
+      }
+    ],
+    "logo": "/work/atlas/logo.webp"
+  },
+  "everythingos": {
+    "cover": "/work/everythingos/00-booking-dashboard.webp",
+    "images": [
+      {
+        "src": "/work/everythingos/00-booking-dashboard.webp",
+        "alt": "EveryBooking merchant dashboard: today, next up, revenue, bookings, utilization and analytics",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1125
+      },
+      {
+        "src": "/work/everythingos/01-booking-site.webp",
+        "alt": "EverySite public booking page generated for a demo merchant, Smash Court PH, a badminton and pickleball venue",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1067
+      },
+      {
+        "src": "/work/everythingos/02-website-customizer.webp",
+        "alt": "EverySite customizer: merchant picks a template and edits headline, colours and fonts with a live preview",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1125
+      },
+      {
+        "src": "/work/everythingos/03-design-editor.webp",
+        "alt": "EveryDesign layer editor with a 'Payday Sale' poster, layers panel and properties",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1125
+      },
+      {
+        "src": "/work/everythingos/04-design-fanout.webp",
+        "alt": "'One idea. Every format.': one design laid out automatically into posts, stories, flyers and tarpaulin sizes",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1125
+      },
+      {
+        "src": "/work/everythingos/05-design-templates.webp",
+        "alt": "EveryDesign template picker: describe what you're announcing and choose from template families",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1125
+      },
+      {
+        "src": "/work/everythingos/06-site-hero.webp",
+        "alt": "EverythingOS landing page: \"Everything you need to run your business in one place.\"",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/everythingos/07-site-suite.webp",
+        "alt": "The suite: EveryBooking, EveryWrite, EveryDeck, EveryPOS and more apps sharing one workspace",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/everythingos/08-site-ai.webp",
+        "alt": "EveryAI: one automation layer across every app with full business context",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      }
+    ],
+    "logo": "/work/everythingos/logo.webp"
+  },
+  "onetup": {
+    "cover": "/work/onetup/cover.webp",
+    "images": [
+      {
+        "src": "/work/onetup/01-landing.webp",
+        "alt": "OneTUP landing page: 'Welcome to OneTUP' over an illustration of the TUP Manila main building",
+        "kind": "desktop",
+        "w": 1280,
+        "h": 800
+      },
+      {
+        "src": "/work/onetup/02-features.webp",
+        "alt": "'Six things you check every day': OneTUP works back from your first class to tell you when to wake up and leave",
+        "kind": "desktop",
+        "w": 1280,
+        "h": 800
+      },
+      {
+        "src": "/work/onetup/03-campus-tour.webp",
+        "alt": "OneTUP 360\u00b0 campus tour at the College of Architecture and Fine Arts, with room finder and building picker",
+        "kind": "desktop",
+        "w": 1280,
+        "h": 800
+      },
+      {
+        "src": "/work/onetup/04-today.webp",
+        "alt": "OneTUP mobile 'Today' screen: up-next class card and quick actions for attendance, deadlines and commute",
+        "kind": "phone",
+        "w": 411,
+        "h": 905
+      },
+      {
+        "src": "/work/onetup/05-ask-onetup.webp",
+        "alt": "'Ask OneTUP' assistant with suggested questions in English and Filipino about schedules, cuts and commuting",
+        "kind": "phone",
+        "w": 417,
+        "h": 890
+      }
+    ],
+    "logo": "/work/onetup/logo.webp"
+  },
+  "wika-hq": {
+    "cover": "/work/wika-hq/cover.webp",
+    "images": [
+      {
+        "src": "/work/wika-hq/01-email-studio.webp",
+        "alt": "Wika HQ Email Studio: block-based email editor with a live preview of the 'Opening Night Manila' invitation",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/wika-hq/04-standup.webp",
+        "alt": "Wika HQ 'New standup' sheet: pick sprint tickets, set status and post a daily update",
+        "kind": "desktop",
+        "w": 686,
+        "h": 912
+      }
+    ],
+    "logo": "/work/wika-hq/logo.webp"
+  },
+  "kpve": {
+    "cover": "/work/kpve/cover.webp",
+    "images": [
+      {
+        "src": "/work/kpve/01-hero.webp",
+        "alt": "KPVE website hero: 'Helping Ambitious Teams Ship Premium Digital Products' over a dark 3D ribbon",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1074
+      },
+      {
+        "src": "/work/kpve/02-recent-projects.webp",
+        "alt": "KPVE 'Our Recent Projects' grid featuring DocOnCall, Tella Balls, Colney & Co. and SDA Rentals",
+        "kind": "desktop",
+        "w": 1226,
+        "h": 1432
+      },
+      {
+        "src": "/work/kpve/03-services.webp",
+        "alt": "KPVE Services page: 'Services Built to Scale with You' with design, web development and hosting cards",
+        "kind": "desktop",
+        "w": 1216,
+        "h": 1316
+      },
+      {
+        "src": "/work/kpve/04-crm-invoice.webp",
+        "alt": "KPVE CRM invoice editor in dark mode with send, print, copy client link and PDF download (sample data)",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1072
+      },
+      {
+        "src": "/work/kpve/05-client-portal.webp",
+        "alt": "KPVE client portal overview: overdue notice, balance due, next payment, active services and recent payments (test client)",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 957
+      },
+      {
+        "src": "/work/kpve/06-mobile-hero.webp",
+        "alt": "KPVE website on mobile: 'Kappatos Productions and Venture Enterprises' hero with stats cards",
+        "kind": "phone",
+        "w": 866,
+        "h": 1442
+      }
+    ],
+    "logo": "/work/kpve/logo.webp"
+  },
+  "kap-group": {
+    "cover": "/work/kap-group/cover.webp",
+    "images": [
+      {
+        "src": "/work/kap-group/01-website-home.webp",
+        "alt": "KAP Group website: \"We advise our clients on the next steps in their property journey.\"",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/kap-group/02-website-project.webp",
+        "alt": "Project page for 14 Arunga Avenue, four NDIS-spec townhouses",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/kap-group/03-website-advisory.webp",
+        "alt": "Advisory: buy-side only, five services from strategy to property management",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/kap-group/03-app-sign-in.webp",
+        "alt": "KAP Group investor app sign-in: 'Your portfolio, in your pocket.' with Face ID option (email blurred)",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/kap-group/04-app-face-id.webp",
+        "alt": "KAP Group app onboarding step: enable Face ID to sign in next time",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/kap-group/05-app-documents.webp",
+        "alt": "KAP Group app Documents tab: agreements awaiting e-signature and executed leases (address blurred)",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      }
+    ],
+    "logo": "/work/kap-group/logo.webp"
+  },
+  "bytheway": {
+    "cover": "/work/bytheway/cover.webp",
+    "images": [
+      {
+        "src": "/work/bytheway/01-persona-personality.webp",
+        "alt": "By The Way 'Create AI Persona' personality step: sliders for brief vs thorough, prose vs structured, formal vs casual",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/bytheway/02-persona-knowledge.webp",
+        "alt": "Create AI Persona knowledge step: core instructions, drag-and-drop knowledge sources and citation settings",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/bytheway/03-persona-preview.webp",
+        "alt": "Create AI Persona preview and visibility step before saving the persona",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/bytheway/04-skills.webp",
+        "alt": "Single-persona v2 Skills tab: toggles for email assistant, daily plan, calendar manager and health coach",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/bytheway/05-marketplace.webp",
+        "alt": "By The Way marketplace: browse AI specialists such as a marketer, chef and English teacher",
+        "kind": "phone",
+        "w": 592,
+        "h": 1280
+      }
+    ],
+    "logo": "/work/bytheway/logo.webp"
+  },
+  "superkick": {
+    "cover": "/work/superkick/cover.webp",
+    "images": [
+      {
+        "src": "/work/superkick/01-home.webp",
+        "alt": "Superkick home: trending full match hero 'Hangman Page & Kenny Omega & Jetspeed vs Young Bucks & Kyle Fletcher' with promotion logo rail",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 928
+      },
+      {
+        "src": "/work/superkick/02-match-detail.webp",
+        "alt": "Superkick match page for Darby Allin vs Claudio Castagnoli with event, stipulation, runtime and source metadata",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 928
+      },
+      {
+        "src": "/work/superkick/03-promotion-page.webp",
+        "alt": "All Elite Wrestling promotion page with popular wrestlers and curated rails like 'Start here: AEW in 6 matches'",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 928
+      },
+      {
+        "src": "/work/superkick/04-spoiler-mode.webp",
+        "alt": "Browse view with spoiler-free mode on: thumbnails are blurred so results aren't given away",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/superkick/05-mobile.webp",
+        "alt": "Superkick on mobile: trending match hero with play button and promotion rail",
+        "kind": "phone",
+        "w": 412,
+        "h": 765
+      }
+    ],
+    "logo": "/work/superkick/logo.webp"
+  },
+  "devcon-plus": {
+    "cover": "/work/devcon-plus/cover.webp",
+    "images": [
+      {
+        "src": "/work/devcon-plus/01-home.webp",
+        "alt": "DEVCON+ member home: points, quick actions, internship banner and community updates",
+        "kind": "phone",
+        "w": 430,
+        "h": 932
+      },
+      {
+        "src": "/work/devcon-plus/02-events.webp",
+        "alt": "Discover Events: upcoming events across chapters with registration and tickets",
+        "kind": "phone",
+        "w": 430,
+        "h": 932
+      },
+      {
+        "src": "/work/devcon-plus/03-jobs.webp",
+        "alt": "Jobs Board: featured roles from DEVCON partners",
+        "kind": "phone",
+        "w": 430,
+        "h": 932
+      },
+      {
+        "src": "/work/devcon-plus/04-onboarding.webp",
+        "alt": "Onboarding: \"Your portal to the Philippines' largest tech volunteer community\"",
+        "kind": "phone",
+        "w": 390,
+        "h": 844
+      }
+    ],
+    "logo": "/work/devcon-plus/logo.webp"
+  },
+  "sda-rentals": {
+    "cover": "/work/sda-rentals/cover.webp",
+    "images": [
+      {
+        "src": "/work/sda-rentals/01-hero.webp",
+        "alt": "SDA Rentals homepage hero: 'Specialist disability homes, ready now.' with the Properties menu open",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1060
+      },
+      {
+        "src": "/work/sda-rentals/02-available-homes.webp",
+        "alt": "Available Homes grid of SDA vacancies with design category, bedrooms and lease badges",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1060
+      },
+      {
+        "src": "/work/sda-rentals/03-for-sale.webp",
+        "alt": "'NDIS properties for sale' page with listing cards and enquiry buttons",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 931
+      },
+      {
+        "src": "/work/sda-rentals/04-app-home.webp",
+        "alt": "SDA Rentals tenant app home: 'Find a home that fits' with availability counts, design categories and featured homes",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/sda-rentals/05-app-property.webp",
+        "alt": "SDA Rentals app property detail for 22 Farington Avenue with photo gallery and SDA design category",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      }
+    ],
+    "logo": "/work/sda-rentals/logo.webp"
+  },
+  "doc-on-call": {
+    "cover": "/work/doc-on-call/cover.webp",
+    "images": [
+      {
+        "src": "/work/doc-on-call/01-recovery-suites-hero.webp",
+        "alt": "DOC Recovery Suites landing page: 'Recharge. Recover. Perform Better.' with ice bath and sauna imagery",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 938
+      },
+      {
+        "src": "/work/doc-on-call/02-recovery-suites-benefits.webp",
+        "alt": "Recovery Suites 'Why Contrast Therapy Works' benefits section",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 838
+      },
+      {
+        "src": "/work/doc-on-call/03-recovery-suites-booking.webp",
+        "alt": "Recovery Suites booking step: choose a casual session, weekly membership, sauna foundation or annual plan",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1479
+      },
+      {
+        "src": "/work/doc-on-call/04-app-home.webp",
+        "alt": "DOC On Call patient app home: book a GP, active and upcoming appointments, and trusted doctors (demo patient)",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/doc-on-call/05-app-services.webp",
+        "alt": "DOC On Call service picker: GP consultation, allied health, specialist and mental health",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      },
+      {
+        "src": "/work/doc-on-call/06-ai-receptionist.webp",
+        "alt": "DOC On Call AI Receptionist chat with quick actions to book, reschedule, request certificates and download prescriptions",
+        "kind": "phone",
+        "w": 900,
+        "h": 1957
+      }
+    ],
+    "logo": "/work/doc-on-call/logo.webp"
+  },
+  "rare-gem": {
+    "cover": "/work/rare-gem/cover.webp",
+    "images": [
+      {
+        "src": "/work/rare-gem/01-hero.webp",
+        "alt": "Rare Gem Exchange hero: gold monogram, 'Investment Grade Gemstones' and Explore the Collection call to action",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1051
+      },
+      {
+        "src": "/work/rare-gem/02-featured-gems.webp",
+        "alt": "Rare Gem Exchange 'Featured Gems': ruby, pink diamond and yellow diamond cards on a dark luxury layout",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1074
+      },
+      {
+        "src": "/work/rare-gem/03-gem-detail.webp",
+        "alt": "Gem detail page for a 4.15 carat royal blue Ceylon sapphire with gallery and inquiry button",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1125
+      },
+      {
+        "src": "/work/rare-gem/04-compare.webp",
+        "alt": "'Compare similar sapphires' side-by-side specification comparison",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1125
+      },
+      {
+        "src": "/work/rare-gem/05-app-vault.webp",
+        "alt": "Rare Gem Exchange mobile app vault: featured 'The Argyle Rose' pink diamond, category chips and gem grid",
+        "kind": "phone",
+        "w": 900,
+        "h": 1951
+      }
+    ],
+    "logo": "/work/rare-gem/logo.webp"
+  },
+  "logmark-ai": {
+    "cover": "/work/logmark-ai/cover.webp",
+    "images": [
+      {
+        "src": "/work/logmark-ai/01-spotlight.webp",
+        "alt": "LogMark Spotlight: a shuffleable stack of saved bookmarks, each summarised by AI with tags and source link",
+        "kind": "desktop",
+        "w": 1280,
+        "h": 753
+      },
+      {
+        "src": "/work/logmark-ai/02-collections.webp",
+        "alt": "LogMark Collections: AI-sorted smart folders such as Dev, Design, Finance and Productivity",
+        "kind": "desktop",
+        "w": 1280,
+        "h": 753
+      },
+      {
+        "src": "/work/logmark-ai/03-collection-dev.webp",
+        "alt": "The Dev collection: summarised X posts and YouTube videos grouped by intent",
+        "kind": "desktop",
+        "w": 1280,
+        "h": 753
+      },
+      {
+        "src": "/work/logmark-ai/04-connectors.webp",
+        "alt": "LogMark Connectors: sync Twitter/X bookmarks and import a YouTube playlist",
+        "kind": "desktop",
+        "w": 1280,
+        "h": 753
+      }
+    ]
+  },
+  "eclipse": {
+    "cover": "/work/eclipse/cover.webp",
+    "images": [
+      {
+        "src": "/work/eclipse/01-key-art.webp",
+        "alt": "Eclipse key art: a cracked white mask above the ECLIPSE wordmark in grayscale",
+        "kind": "poster",
+        "w": 512,
+        "h": 512
+      },
+      {
+        "src": "/work/eclipse/02-cutscene-awakening.webp",
+        "alt": "Eclipse cutscene art: a masked figure lit in a hollow of jagged black-and-white silhouettes",
+        "kind": "desktop",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "src": "/work/eclipse/03-cutscene-plains.webp",
+        "alt": "Eclipse cutscene art: a lone figure beneath towering shattered rock spires",
+        "kind": "desktop",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "src": "/work/eclipse/04-gameplay.webp",
+        "alt": "Eclipse gameplay: the light state, leaping between floating ruins",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1012
+      },
+      {
+        "src": "/work/eclipse/05-gameplay-dark.webp",
+        "alt": "Eclipse gameplay: the dark state, exploring a cave lit by spirits",
+        "kind": "desktop",
+        "w": 1800,
+        "h": 1012
+      }
+    ],
+    "logo": "/work/eclipse/logo.webp"
+  },
+  "_extras": {
+    "headshot": {
+      "src": "/about/headshot-barong.webp",
+      "alt": "Kien Serapio in a barong Tagalog, smiling, against a white background",
+      "kind": "poster",
+      "w": 700,
+      "h": 875
+    },
+    "press": {
+      "frequency-news": {
+        "src": "/press/frequency-news.webp",
+        "alt": "Kien Serapio presenting the 'Meet Wika PH' team slide at the Wika launch event, as featured by Frequency News",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1200
+      },
+      "ases-manila": {
+        "src": "/press/ases-manila.webp",
+        "alt": "ASES Manila feature graphic: 'TUP Student Builds \"Duolingo for Philippine Languages\" to Help Filipinos Relearn Their Mother Tongues'",
+        "kind": "poster",
+        "w": 800,
+        "h": 800
+      },
+      "dzmm": {
+        "src": "/press/dzmm.webp",
+        "alt": "DZMM TeleRadyo's Dekalibreng Balita segment with the Wika PH founders in studio",
+        "kind": "poster",
+        "w": 1080,
+        "h": 1350
+      },
+      "radar-ph": {
+        "src": "/press/radar-ph.webp",
+        "alt": "radar.ph graphic: This 'Duolingo for PH languages' brings regional tongues to Gen Z",
+        "kind": "poster",
+        "w": 600,
+        "h": 750
+      },
+      "science-department": {
+        "src": "/press/science-department.webp",
+        "alt": "The Wika PH team taking a selfie, from Science Department's feature",
+        "kind": "poster",
+        "w": 1400,
+        "h": 1400
+      },
+      "philippine-coding-camp": {
+        "src": "/press/philippine-coding-camp.webp",
+        "alt": "Philippine Coding Camp feature graphic on Kien Serapio and Wika PH",
+        "kind": "poster",
+        "w": 960,
+        "h": 1200
+      },
+      "iskolar-ng-bayan": {
+        "src": "/press/iskolar-ng-bayan.webp",
+        "alt": "Iskolar ng Bayan feature graphic on the Wika PH team",
+        "kind": "poster",
+        "w": 960,
+        "h": 1202
+      },
+      "radyo-magasin": {
+        "src": "/press/radyo-magasin.webp",
+        "alt": "Radyo Magasin 1278 AM Iskultura card featuring the Wika PH founders, October 1, 2026",
+        "kind": "poster",
+        "w": 1080,
+        "h": 1080
+      },
+      "radyo-pilipinas": {
+        "src": "/press/radyo-pilipinas.webp",
+        "alt": "The Wika PH logo, from Radyo Pilipinas' article",
+        "kind": "poster",
+        "w": 1200,
+        "h": 900
+      },
+      "mabuhay-canada": {
+        "src": "/press/mabuhay-canada.webp",
+        "alt": "Kien Serapio presenting the Meet Wika PH slide at the Wika launch event",
+        "kind": "poster",
+        "w": 1400,
+        "h": 1050
+      }
+    },
+    "awards": {
+      "devcamp-manila-2026": {
+        "src": "/awards/devcamp-manila-2026.webp",
+        "alt": "The Wika team on stage with the judges at Developer Camp Manila 2026, where Wika was named Runner-Up",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1067
+      },
+      "jru": {
+        "src": "/events/jru.webp",
+        "alt": "Kien Serapio speaking at the AI Am Ready seminar in a Jos\u00e9 Rizal University computer lab",
+        "kind": "poster",
+        "w": 1600,
+        "h": 900
+      },
+      "batstateu-catalycst": {
+        "src": "/events/batstateu-catalycst.webp",
+        "alt": "CatalyCSt speaker card for Kien Leriss R. Serapio, Batangas State University",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1600
+      },
+      "caffeine-ai": {
+        "src": "/events/caffeine-ai.webp",
+        "alt": "The volunteer team at the Caffeine AI Manila Hackathon",
+        "kind": "poster",
+        "w": 1600,
+        "h": 900
+      },
+      "earist": {
+        "src": "/events/earist.webp",
+        "alt": "Kien Serapio on stage presenting chain-of-thought prompting at the EARIST COMSA Seminar",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1066
+      },
+      "devcon-game-on": {
+        "src": "/events/devcon-game-on.webp",
+        "alt": "Game On Game Jam speaker card for Kien Serapio, DEVCON Manila",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1600
+      },
+      "pup-se-day": {
+        "src": "/events/pup-se-day.webp",
+        "alt": "Software Engineering Day 2025 ideathon judge card for Kien Serapio",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1066
+      },
+      "sikaptala": {
+        "src": "/events/sikaptala.webp",
+        "alt": "SIKAPTala 2026 judge card for Kien Leriss R. Serapio",
+        "kind": "poster",
+        "w": 1080,
+        "h": 1080
+      },
+      "study-jam-2026": {
+        "src": "/events/study-jam-2026.webp",
+        "alt": "Attendees of Google Study Jam 2026: Dream, Design, Develop",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1200
+      },
+      "hawkathon": {
+        "src": "/events/hawkathon.webp",
+        "alt": "Participants of the UI/UX Hawk-A-Thon 2025",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1066
+      },
+      "pup-unlock": {
+        "src": "/events/pup-unlock.webp",
+        "alt": "Unlock() speaker card for Kien Leriss R. Serapio, PUP The Programmers\u2019 Guild",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1600
+      },
+      "earist-group": {
+        "src": "/events/earist-group.webp",
+        "alt": "The audience of the EARIST COMSA Seminar 2025",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1066
+      },
+      "ph100": {
+        "src": "/awards/ph100.webp",
+        "alt": "Kien Serapio, Founder & CEO of Wika PH, in the StellarPH PH100 2026 card",
+        "kind": "poster",
+        "w": 1227,
+        "h": 1600
+      },
+      "founders-live": {
+        "src": "/awards/founders-live.webp",
+        "alt": "The Wika PH team at Founders Live Manila",
+        "kind": "poster",
+        "w": 1280,
+        "h": 960
+      },
+      "startup-qc-2026": {
+        "src": "/awards/startup-qc-2026.webp",
+        "alt": "Finalists and organizers at StartUp QC Batch 3 2026",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1066
+      },
+      "sk-pembo": {
+        "src": "/events/sk-pembo.webp",
+        "alt": "Guest speaker card for Kien Leriss Serapio, software developer, SK Pembo Digital Skills and Career Readiness Workshop",
+        "kind": "poster",
+        "w": 1080,
+        "h": 1080
+      },
+      "wika-opening-night": {
+        "src": "/events/wika-opening-night.webp",
+        "alt": "The crowd at Wika PH Opening Night Manila, Cubao Expo, making the W sign",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1200
+      },
+      "gdgoc-plm": {
+        "src": "/events/gdgoc-plm.webp",
+        "alt": "Kien Serapio receiving a certificate of recognition at the GDGoC PLM General Assembly 2025",
+        "kind": "poster",
+        "w": 1600,
+        "h": 1280
+      },
+      "ai-handa-na-ba-tayo": {
+        "src": "/events/ai-handa-na-ba-tayo.webp",
+        "alt": "Kien Serapio with fellow panelists at AI: Handa na ba tayo?, DEVCON Manila, holding the event card",
+        "kind": "poster",
+        "w": 1600,
+        "h": 898
+      }
+    }
+  },
+  "devcon-agent-kit": {
+    "images": [
+      {
+        "src": "/work/devcon-agent-kit/01-welcome.webp",
+        "alt": "DEVCON Jumpstart Agent Kit: describe a product idea to draft a PRD and a Mermaid user-flow diagram",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "src": "/work/devcon-agent-kit/02-prompt.webp",
+        "alt": "Starting a PRD from the \"Mobile application\" template with Concise and Full modes",
+        "kind": "desktop",
+        "w": 1440,
+        "h": 900
+      }
+    ],
+    "logo": "/work/devcon-agent-kit/logo.webp",
+    "cover": "/work/devcon-agent-kit/cover.webp"
+  }
+}
